@@ -3,29 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="my.css" />
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesHeader.css" />
   </head>
   <body>
-    <header>My Portfolio</header>
+    <section class="hero">
+      <!-- Background Grain Effect -->
+      <div class="hero-background"></div>
 
-    <section>
-      <h2>Welcome to My Portfolio</h2>
-      <p>Here are some of my projects:</p>
+      <!-- Hero Rings -->
+      <div class="hero-ring ring-1"></div>
+      <div class="hero-ring ring-2"></div>
+      <div class="hero-ring ring-3"></div>
+      <div class="hero-ring ring-4"></div>
 
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>A cool web project.</p>
-        <a href="#">View Project</a>
+      <!-- Orbit Effect -->
+      <div class="hero-orbit" data-size="800" data-rotation="-72">
+        <img src="assets/icons/star.svg" class="orbit-icon" />
       </div>
 
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Another awesome project.</p>
-        <a href="#">View Project</a>
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <img src="assets/images/mee.png" alt="Avatar" class="hero-avatar" />
+
+        <!-- Status Box -->
+        <div class="status-box">
+          <div class="status-indicator"></div>
+          <span>Available for new projects</span>
+        </div>
+
+        <!-- Heading & Description -->
+        <h1 class="hero-title">Where Data Meets Science & Innovation</h1>
+        <p class="hero-subtitle">
+          I specialize in Data Science, turning raw data into actionable
+          insights. <br />
+          Building predictive models, designing intelligent solutions, <br />
+          and leveraging AI to solve real-world problems.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+          <button class="hero-btn">
+            <span>Explore My Work Here</span>
+            <img src="assets/icons/arrow-down.svg" class="arrow-icon" />
+          </button>
+          <button class="hero-btn primary">
+            <span>👋</span>
+            <span>Let's Connect</span>
+          </button>
+        </div>
       </div>
-      <button id="myButton">cklick here</button>
-      <script src="myScript.js"></script>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
