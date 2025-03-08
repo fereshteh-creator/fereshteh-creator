@@ -11,10 +11,58 @@ document.addEventListener("DOMContentLoaded", () => {
       // Now, generate the stars after header loads
       setTimeout(() => {
         generateStars();
-        startRingExpansion(); // 🔥 Start expansion AFTER rings exist
+        startRingExpansion(); // Start expansion AFTER rings exist
       }, 100);
     })
     .catch((error) => console.error("Error loading header:", error));
+
+  // Fetch and insert the footer
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.body.insertAdjacentHTML("beforeend", data);
+      console.log("Footer loaded.");
+    })
+    .catch((error) => console.error("Error loading footer:", error));
+  // 🔥 Adjust Footer Position Based on Expanding Rings
+  function adjustFooter() {
+    const footer = document.querySelector(".footer");
+    const hero = document.querySelector(".hero");
+
+    if (!footer || !hero) return;
+
+    const observer = new ResizeObserver(() => {
+      const heroHeight = hero.offsetHeight;
+      footer.style.marginTop = `${heroHeight * 0.2}px`; // Adjusts dynamically
+    });
+
+    observer.observe(hero);
+  }
+
+  // Fetch and insert the skills section only if on the About page
+  if (window.location.pathname.includes("about.html")) {
+    console.log(" Detected about.html. Attempting to load skills...");
+
+    const skillsContainer = document.getElementById("skills-container");
+    if (skillsContainer) {
+      fetch("skills.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load skills.html");
+          return response.text();
+        })
+        .then((data) => {
+          skillsContainer.innerHTML = data;
+          console.log("Skills section successfully loaded inside About.");
+        })
+        .catch((error) =>
+          console.error("Error loading skills section:", error)
+        );
+    } else {
+      console.warn(
+        "⚠️ No #skills-container found. Skipping skills section load."
+      );
+    }
+  }
 });
 
 // Function to Generate Multiple Stars in Different Rings

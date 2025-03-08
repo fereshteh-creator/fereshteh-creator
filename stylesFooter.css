@@ -1,0 +1,135 @@
+/* Footer */
+.footer {
+  background: #141820;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%; /* Ensure full width */
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center; /* Center footer horizontally */
+  align-items: center;
+  margin-top: 20%;
+}
+
+/* Push Footer Down Dynamically */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full-page height */
+}
+
+main {
+  flex: 1; /* Pushes footer down dynamically */
+}
+
+/* Add a Line at the Top */
+.footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    to Right,
+    rgb(20, 24, 32),
+    rgba(233, 184, 80, 0.5),
+    rgba(58, 120, 202, 0.13),
+    rgb(20, 24, 32)
+  ); /* Soft glowing line */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: center; /* Center all items */
+  align-items: center;
+  max-width: 1200px; /* Prevents excessive stretching */
+  width: 100%;
+  margin: 0 auto; /* Ensures it's centered */
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+/* Footer Left */
+.footer-left {
+  flex: 1;
+  text-align: left;
+  min-width: 150px; /* Prevents uneven shrinking */
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer Center (Navigation Links) */
+.footer-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-center a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-center a:hover {
+  color: #ffffff;
+}
+
+/* Footer Right (Social Icons) */
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-right img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-right a:hover img {
+  transform: scale(1.2);
+}
+
+/* 🔥 Fix Alignment on Small Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+    justify-content: center;
+    flex: unset;
+    width: 100%; /* Ensures full width on smaller screens */
+    min-width: unset;
+  }
+
+  .footer-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
