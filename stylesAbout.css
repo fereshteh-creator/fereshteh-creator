@@ -1,13 +1,19 @@
 /* Set Background */
 body {
   background-color: #141820;
-  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 80px;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh; /* Ensures full viewport height */
-  padding: 40px 0;
-  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 h2 {
@@ -19,11 +25,24 @@ p {
 }
 
 /* About Section */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
 #about {
   text-align: center;
-  max-width: 800px;
   padding: 50px 20px;
   margin-bottom: 50px; /* Adds space between About and Skills */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 /* Skills Section */
 .skills {
@@ -74,4 +93,32 @@ p {
 
 .skill-card:hover img {
   filter: grayscale(0%);
+}
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    justify-content: center;
+  }
 }

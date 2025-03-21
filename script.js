@@ -7,11 +7,44 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.body.insertAdjacentHTML("afterbegin", data);
       console.log("Header loaded.");
+      document.body.style.display = "none";
+      document.body.offsetHeight; // Force a reflow
+      document.body.style.display = "block";
+      // Setup hamburger menu toggle immediately
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+          nav.classList.toggle("open");
+        });
+      }
+
+      // Highlight current page in nav
+      const setActiveNavItem = () => {
+        const currentPage =
+          window.location.pathname.split("/").pop().replace(".html", "") ||
+          "index";
+        const navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach((item) => {
+          const page = item.dataset.page;
+          if (
+            (currentPage === "index" && page === "home") ||
+            currentPage === page
+          ) {
+            item.classList.add("active");
+          }
+        });
+      };
+
+      setActiveNavItem();
 
       // Now, generate the stars after header loads
       setTimeout(() => {
         generateStars();
         startRingExpansion(); // Start expansion AFTER rings exist
+        window.dispatchEvent(new Event("resize"));
       }, 100);
     })
     .catch((error) => console.error("Error loading header:", error));
@@ -24,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Footer loaded.");
     })
     .catch((error) => console.error("Error loading footer:", error));
-  // 🔥 Adjust Footer Position Based on Expanding Rings
+  //  Adjust Footer Position Based on Expanding Rings
   function adjustFooter() {
     const footer = document.querySelector(".footer");
     const hero = document.querySelector(".hero");

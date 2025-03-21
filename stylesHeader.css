@@ -5,19 +5,42 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 /* Navigation Bar */
 .nav {
   display: flex;
-  gap: 16px;
+  gap: 16px 0;
   padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+}
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Center the nav on large screens */
+@media (min-width: 601px) {
+  .nav-container {
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 /* Navigation Links */
@@ -29,6 +52,7 @@
   font-weight: 600;
   transition: background 0.3s, color 0.3s;
   text-decoration: none;
+  margin: 0;
 }
 
 /* Hover Effect */
@@ -37,14 +61,53 @@
   color: white;
 }
 
-/* Contact Button Specific Style */
-.contact {
-  background: white;
-  color: rgb(55, 65, 81);
-  font-weight: 600;
+/* Hamburger Button - hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-top: 8px;
 }
 
-.contact:hover {
-  background: rgba(255, 255, 255, 0.7);
-  color: rgb(55, 65, 81);
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 2px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 0;
+    padding: 20px 0;
+    gap: 10px;
+    align-items: center;
+    display: none;
+    z-index: 1001;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    border: none;
+  }
+
+  .nav.open {
+    display: flex;
+    max-height: 300px;
+  }
 }
