@@ -165,3 +165,26 @@ function startRingExpansion() {
     });
   }, 100); // Small delay to ensure browser registers the change
 }
+
+// EmailJS Integration for Contact Form
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector(".contact-form");
+
+  if (contactForm) {
+    emailjs.init("Zp8j7lcmSsSUKcMfY");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_qrdlk7g", "template_yy9luon", this).then(
+        function () {
+          alert("Message sent successfully!");
+          contactForm.reset();
+        },
+        function (error) {
+          alert("Oops! Something went wrong:\n" + JSON.stringify(error));
+        }
+      );
+    });
+  }
+});
