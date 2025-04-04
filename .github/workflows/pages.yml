@@ -30,6 +30,10 @@ jobs:
           echo "const EMAILJS_SERVICE_ID = '${{ secrets.EMAILJS_SERVICE_ID }}';" >> secret.js
           echo "const EMAILJS_TEMPLATE_ID = '${{ secrets.EMAILJS_TEMPLATE_ID }}';" >> secret.js
 
+      - name: Show contents of secret.js
+        run: cat secret.js
+
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
