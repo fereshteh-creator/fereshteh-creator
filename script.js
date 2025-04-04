@@ -166,25 +166,34 @@ function startRingExpansion() {
   }, 100); // Small delay to ensure browser registers the change
 }
 
-// EmailJS Integration for Contact Form
+// EmailJS Integration for Contact Form (uses injected secrets)
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector(".contact-form");
 
-  if (contactForm) {
-    emailjs.init("Zp8j7lcmSsSUKcMfY");
+  if (
+    contactForm &&
+    typeof EMAILJS_PUBLIC_KEY !== "undefined" &&
+    typeof EMAILJS_SERVICE_ID !== "undefined" &&
+    typeof EMAILJS_TEMPLATE_ID !== "undefined"
+  ) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
 
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.sendForm("service_qrdlk7g", "template_yy9luon", this).then(
-        function () {
+      emailjs
+        .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(() => {
           alert("Message sent successfully!");
           contactForm.reset();
-        },
-        function (error) {
+        })
+        .catch((error) => {
           alert("Oops! Something went wrong:\n" + JSON.stringify(error));
-        }
-      );
+        });
     });
+  } else if (contactForm) {
+    console.error(
+      " EmailJS credentials not found. Make sure secret.js is loaded and defines EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, and EMAILJS_TEMPLATE_ID."
+    );
   }
 });
