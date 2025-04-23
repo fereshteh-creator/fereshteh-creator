@@ -16,7 +16,7 @@ export async function handler(event) {
     const message = body.message;
 
     const hfResponse = await fetch(
-      "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1",
+      "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
       {
         method: "POST",
         headers: {
@@ -24,7 +24,7 @@ export async function handler(event) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          inputs: `User: ${message}\nBot:`,
+          inputs: `<|user|>\n${message}\n<|assistant|>`,
           parameters: {
             max_new_tokens: 200,
             return_full_text: false,
@@ -48,7 +48,7 @@ export async function handler(event) {
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
-    console.error("Mistral error:", error.message);
+    console.error("Zephyr error:", error.message);
     return {
       statusCode: 500,
       headers: {
