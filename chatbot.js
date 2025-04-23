@@ -36,13 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function getGPTResponse(message) {
-    const res = await fetch("/.netlify/functions/fereshbot", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message }),
-    });
+    const res = await fetch(
+      "https://magnificent-shortbread-339638.netlify.app/.netlify/functions/fereshbot",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+      }
+    );
 
     const data = await res.json();
     return data.reply || "Hmm, I didn’t get that.";
