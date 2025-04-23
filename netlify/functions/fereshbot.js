@@ -38,6 +38,9 @@ export async function handler(event) {
     });
 
     const data = await response.json();
+    console.log("GPT response:", JSON.stringify(data, null, 2));
+    console.log("User message:", message);
+
     const reply =
       data?.choices?.[0]?.message?.content || "Sorry, I didn’t catch that.";
 
