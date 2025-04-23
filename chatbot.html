@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Chatbot</title>
+    <title>Meet FereshBot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesHeader.css" />
     <link rel="stylesheet" href="stylesFooter.css" />
@@ -13,18 +13,26 @@
 
   <body>
     <main>
-      <!-- 💬 Chatbot Trigger Button + Panel -->
-      <div id="chatbot">
-        <button id="chatbot-toggle">💬</button>
-        <div id="chatbot-panel" class="hidden">
+      <section class="bot-intro">
+        <div class="bot-title">
+          <img src="assets/images/bot.png" alt="FereshBot logo" />
+          <h1>FereshBot</h1>
+        </div>
+      </section>
+
+      <div id="chatbot" class="expanded">
+        <div id="chatbot-panel">
           <div id="chatbot-messages">
-            <div class="bot">Hi! I’m FereshBot. Ask me something!</div>
+            <div class="bot">
+              Hi! I'm Fereshteh's AI assistant! Ask me anything about her
+              background, skills, or work — I'm here to help.
+            </div>
           </div>
           <form id="chatbot-form">
             <input
               type="text"
               id="chatbot-input"
-              placeholder="Type a message..."
+              placeholder="Ask anything..."
               autocomplete="off"
             />
           </form>
