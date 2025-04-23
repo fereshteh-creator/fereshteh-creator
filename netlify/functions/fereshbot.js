@@ -29,8 +29,15 @@ exports.handler = async (event) => {
 
   const data = await response.json();
 
+  const reply =
+    data?.choices?.[0]?.message?.content || "Sorry, I didn’t catch that.";
+
   return {
     statusCode: 200,
-    body: JSON.stringify({ reply: data.choices[0].message.content }),
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+    body: JSON.stringify({ reply }),
   };
 };
