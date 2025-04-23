@@ -1,6 +1,4 @@
-const fetch = require("node-fetch");
-
-exports.handler = async (event) => {
+export async function handler(event) {
   try {
     const body = JSON.parse(event.body);
     const message = body.message;
@@ -17,7 +15,7 @@ exports.handler = async (event) => {
           {
             role: "system",
             content:
-              "You are FereshBot, a helpful assistant who knows everything about Fereshteh and her portfolio.",
+              "You are FereshBot, an assistant that helps people learn about Fereshteh's skills, projects, and background.",
           },
           {
             role: "user",
@@ -40,14 +38,14 @@ exports.handler = async (event) => {
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
-    console.error("FereshBot crashed:", error.message);
+    console.error("FereshBot error:", error.message);
     return {
       statusCode: 500,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Content-Type",
       },
-      body: JSON.stringify({ reply: "Oops! FereshBot ran into an error 🛠️" }),
+      body: JSON.stringify({ reply: "Oops! Something went wrong." }),
     };
   }
-};
+}
