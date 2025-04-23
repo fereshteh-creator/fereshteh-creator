@@ -42,9 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Now, generate the stars after header loads
       setTimeout(() => {
-        generateStars();
-        startRingExpansion(); // Start expansion AFTER rings exist
-        window.dispatchEvent(new Event("resize"));
+        if (
+          window.location.pathname.includes("index.html") ||
+          window.location.pathname === "/"
+        ) {
+          generateStars();
+          startRingExpansion();
+          window.dispatchEvent(new Event("resize"));
+        }
       }, 100);
     })
     .catch((error) => console.error("Error loading header:", error));

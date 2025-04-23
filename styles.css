@@ -111,6 +111,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 
 /* Star Icon */
@@ -128,6 +129,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Avatar */
@@ -220,6 +223,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .hero-btn:hover {

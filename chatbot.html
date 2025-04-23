@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesHeader.css" />
+    <link rel="stylesheet" href="stylesFooter.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <!-- 💬 Chatbot Trigger Button + Panel -->
+      <div id="chatbot">
+        <button id="chatbot-toggle">💬</button>
+        <div id="chatbot-panel" class="hidden">
+          <div id="chatbot-messages">
+            <div class="bot">Hi! I’m FereshBot. Ask me something!</div>
+          </div>
+          <form id="chatbot-form">
+            <input
+              type="text"
+              id="chatbot-input"
+              placeholder="Type a message..."
+              autocomplete="off"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
