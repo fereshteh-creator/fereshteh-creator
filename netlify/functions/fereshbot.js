@@ -1,4 +1,16 @@
 export async function handler(event) {
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+      },
+      body: "CORS preflight response",
+    };
+  }
+
   try {
     const body = JSON.parse(event.body);
     const message = body.message;
@@ -15,7 +27,7 @@ export async function handler(event) {
           {
             role: "system",
             content:
-              "You are FereshBot, an assistant that helps people learn about Fereshteh's skills, projects, and background.",
+              "You are FereshBot, an assistant that helps people learn about Fereshteh’s skills, projects, and background.",
           },
           {
             role: "user",
