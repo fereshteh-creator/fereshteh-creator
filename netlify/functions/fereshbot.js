@@ -7,7 +7,7 @@ export async function handler(event) {
         "Access-Control-Allow-Headers": "Content-Type",
         "Access-Control-Allow-Methods": "POST, OPTIONS",
       },
-      body: "CORS preflight response",
+      body: "CORS preflight OK",
     };
   }
 
@@ -15,34 +15,29 @@ export async function handler(event) {
     const body = JSON.parse(event.body);
     const message = body.message;
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are FereshBot, an assistant that helps people learn about Fereshteh’s skills, projects, and background.",
+    const hfResponse = await fetch(
+      "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.HF_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          inputs: `User: ${message}\nBot:`,
+          parameters: {
+            max_new_tokens: 200,
+            return_full_text: false,
           },
-          {
-            role: "user",
-            content: message,
-          },
-        ],
-      }),
-    });
+        }),
+      }
+    );
 
-    const data = await response.json();
-    console.log("GPT response:", JSON.stringify(data, null, 2));
-    console.log("User message:", message);
+    const result = await hfResponse.json();
 
-    const reply =
-      data?.choices?.[0]?.message?.content || "Sorry, I didn’t catch that.";
+    const reply = Array.isArray(result)
+      ? result[0]?.generated_text || "Sorry, no reply."
+      : result?.error || "Unexpected response.";
 
     return {
       statusCode: 200,
@@ -53,14 +48,14 @@ export async function handler(event) {
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
-    console.error("FereshBot error:", error.message);
+    console.error("Mistral error:", error.message);
     return {
       statusCode: 500,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Content-Type",
       },
-      body: JSON.stringify({ reply: "Oops! Something went wrong." }),
+      body: JSON.stringify({ reply: "FereshBot ran into an error 🛠️" }),
     };
   }
 }
