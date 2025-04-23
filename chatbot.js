@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getGPTResponse(message) {
     const res = await fetch("/.netlify/functions/fereshbot", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ message }),
     });
 
