@@ -42,9 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Now, generate the stars after header loads
       setTimeout(() => {
+        const path = window.location.pathname;
+
         if (
-          window.location.pathname.includes("index.html") ||
-          window.location.pathname === "/"
+          path.endsWith("/") ||
+          path.endsWith("/index.html") ||
+          path === "/" ||
+          path.includes("index.html") ||
+          path.includes("fereshteh-creator") // Replace with your actual repo name on GitHub
         ) {
           generateStars();
           startRingExpansion();
