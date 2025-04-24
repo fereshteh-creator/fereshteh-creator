@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.body.insertAdjacentHTML("afterbegin", data);
       console.log("Header loaded.");
+
       document.body.style.display = "none";
       document.body.offsetHeight; // Force a reflow
       document.body.style.display = "block";
-      // Setup hamburger menu toggle immediately
+
+      // Hamburger toggle setup
       const hamburger = document.querySelector(".hamburger");
       const nav = document.querySelector(".nav");
 
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // Highlight current page in nav
+      // Highlight nav
       const setActiveNavItem = () => {
         const currentPage =
           window.location.pathname.split("/").pop().replace(".html", "") ||
@@ -39,74 +41,75 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       setActiveNavItem();
-
-      // Now, generate the stars after header loads
-      setTimeout(() => {
-        const path = window.location.pathname;
-
-        if (
-          path.endsWith("/") ||
-          path.endsWith("/index.html") ||
-          path === "/" ||
-          path.includes("index.html") ||
-          path.includes("fereshteh-creator") // Replace with your actual repo name on GitHub
-        ) {
-          generateStars();
-          startRingExpansion();
-          window.dispatchEvent(new Event("resize"));
-        }
-      }, 100);
     })
     .catch((error) => console.error("Error loading header:", error));
 
-  // Fetch and insert the footer
-  fetch("footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.body.insertAdjacentHTML("beforeend", data);
-      console.log("Footer loaded.");
-    })
-    .catch((error) => console.error("Error loading footer:", error));
-  //  Adjust Footer Position Based on Expanding Rings
-  function adjustFooter() {
-    const footer = document.querySelector(".footer");
-    const hero = document.querySelector(".hero");
+  // ✅ Moved outside so it's always evaluated when DOM is ready
+  setTimeout(() => {
+    const path = window.location.pathname;
 
-    if (!footer || !hero) return;
-
-    const observer = new ResizeObserver(() => {
-      const heroHeight = hero.offsetHeight;
-      footer.style.marginTop = `${heroHeight * 0.2}px`; // Adjusts dynamically
-    });
-
-    observer.observe(hero);
-  }
-
-  // Fetch and insert the skills section only if on the About page
-  if (window.location.pathname.includes("about.html")) {
-    console.log(" Detected about.html. Attempting to load skills...");
-
-    const skillsContainer = document.getElementById("skills-container");
-    if (skillsContainer) {
-      fetch("skills.html")
-        .then((response) => {
-          if (!response.ok) throw new Error("Failed to load skills.html");
-          return response.text();
-        })
-        .then((data) => {
-          skillsContainer.innerHTML = data;
-          console.log("Skills section successfully loaded inside About.");
-        })
-        .catch((error) =>
-          console.error("Error loading skills section:", error)
-        );
+    if (
+      path.endsWith("/") ||
+      path.endsWith("/index.html") ||
+      path === "/" ||
+      path.includes("index.html") ||
+      path.includes("/fereshteh-creator/")
+    ) {
+      console.log("✅ Running star generation...");
+      generateStars();
+      startRingExpansion();
+      window.dispatchEvent(new Event("resize"));
     } else {
-      console.warn(
-        "⚠️ No #skills-container found. Skipping skills section load."
-      );
+      console.log("❌ Not running star logic on this page:", path);
     }
-  }
+  }, 300); // Delay slightly longer to ensure DOM is ready
 });
+
+// Fetch and insert the footer
+fetch("footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.body.insertAdjacentHTML("beforeend", data);
+    console.log("Footer loaded.");
+  })
+  .catch((error) => console.error("Error loading footer:", error));
+//  Adjust Footer Position Based on Expanding Rings
+function adjustFooter() {
+  const footer = document.querySelector(".footer");
+  const hero = document.querySelector(".hero");
+
+  if (!footer || !hero) return;
+
+  const observer = new ResizeObserver(() => {
+    const heroHeight = hero.offsetHeight;
+    footer.style.marginTop = `${heroHeight * 0.2}px`; // Adjusts dynamically
+  });
+
+  observer.observe(hero);
+}
+
+// Fetch and insert the skills section only if on the About page
+if (window.location.pathname.includes("about.html")) {
+  console.log(" Detected about.html. Attempting to load skills...");
+
+  const skillsContainer = document.getElementById("skills-container");
+  if (skillsContainer) {
+    fetch("skills.html")
+      .then((response) => {
+        if (!response.ok) throw new Error("Failed to load skills.html");
+        return response.text();
+      })
+      .then((data) => {
+        skillsContainer.innerHTML = data;
+        console.log("Skills section successfully loaded inside About.");
+      })
+      .catch((error) => console.error("Error loading skills section:", error));
+  } else {
+    console.warn(
+      "⚠️ No #skills-container found. Skipping skills section load."
+    );
+  }
+}
 
 // Function to Generate Multiple Stars in Different Rings
 function generateStars() {
