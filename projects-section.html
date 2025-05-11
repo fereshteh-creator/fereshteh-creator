@@ -1,0 +1,205 @@
+<section class="projects-section">
+  <h1>My Projects</h1>
+  <div id="projects" class="project-list">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="./assets/images/disney.svg" alt="Disney NLP" />
+      <div class="tags">
+        <span>NLP</span><span>BERT</span><span>Python</span>
+      </div>
+      <h2>Disneyland Review Analysis with NLP</h2>
+      <p>
+        Sentiment analysis and topic modeling of Disneyland reviews using
+        Hugging Face transformers.
+      </p>
+      <button class="toggle-details">Learn More</button>
+      <div class="details hidden">
+        <h3>Project Overview</h3>
+        <p>
+          This project analyzed thousands of Disneyland reviews using Hugging
+          Face transformers to extract sentiment and key themes.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <pre><code># Load and preprocess reviews
+reviews_df = pd.read_csv('disneyland_reviews.csv')
+reviews_df = reviews_df.dropna(subset=['review_text'])
+
+# Initialize sentiment model
+sentiment_analyzer = pipeline(
+    "sentiment-analysis",
+    model="distilbert-base-uncased-finetuned-sst-2-english"
+)
+
+# Get sentiment for each review
+results = sentiment_analyzer(reviews_df['review_text'].tolist())</code></pre>
+
+        <h3>Key Findings</h3>
+        <ul>
+          <li>
+            82% positive sentiment around "rides", "staff", and "atmosphere"
+          </li>
+          <li>Negatives focused on "wait times", "crowds", and "prices"</li>
+          <li>Sentiment lower in winter months</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="./assets/images/wage.png" alt="Wage Prediction" />
+      <div class="tags">
+        <span>XGBoost</span><span>Regression</span><span>Scikit-learn</span>
+      </div>
+      <h2>Data Science Salary Prediction</h2>
+      <p>
+        XGBoost regression model to predict data science salaries based on
+        skills and experience.
+      </p>
+      <button class="toggle-details">Learn More</button>
+      <div class="details hidden">
+        <h3>Model Development</h3>
+        <pre><code># XGBoost model with hyperparameter tuning
+xgb_model = XGBRegressor(
+    objective='reg:squarederror',
+    n_estimators=200,
+    max_depth=6,
+    learning_rate=0.05,
+    subsample=0.8,
+    colsample_bytree=0.8
+)
+
+cv_scores = cross_val_score(
+    xgb_model, X_train, y_train, cv=5, scoring='neg_mean_squared_error'
+)
+print(f"RMSE: {np.sqrt(-np.mean(cv_scores))}")</code></pre>
+
+        <h3>Feature Importance</h3>
+        <ul>
+          <li>Years of experience (27.3%)</li>
+          <li>Location/region (18.6%)</li>
+          <li>Languages known (15.2%)</li>
+          <li>Education level (12.8%)</li>
+          <li>Industry sector (9.5%)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="./assets/images/rag.jpg" alt="Swiss Law RAG" />
+      <div class="tags">
+        <span>RAG</span><span>LLM</span><span>LangChain</span>
+      </div>
+      <h2>Swiss Law RAG System</h2>
+      <p>
+        Retrieval-Augmented Generation system for Swiss legal documents and
+        research.
+      </p>
+      <button class="toggle-details">Learn More</button>
+      <div class="details hidden">
+        <h3>System Architecture</h3>
+        <pre><code># Vector embedding + retrieval setup
+documents = load_swiss_legal_corpus()
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(documents, embeddings)
+
+retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 6})
+llm = ChatOpenAI(model_name="gpt-3.5-turbo")
+rag_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    chain_type="stuff",
+    retriever=retriever
+)</code></pre>
+
+        <h3>Highlights</h3>
+        <ul>
+          <li>90% accuracy answering Swiss legal questions</li>
+          <li>Retrieves legal citations and precedents</li>
+          <li>Multilingual support (German, French, Italian)</li>
+          <li>Used in legal education and research</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <img src="./assets/images/dsl-project.png" alt="DSL Prototype" />
+      <div class="tags">
+        <span>UX</span><span>Agile</span><span>Prototyping</span
+        ><span>User Research</span>
+      </div>
+      <h2>DSL Prototype Development</h2>
+      <p>
+        Agile design and usability testing of software for the Digital
+        Sustainability Lab (DSL).
+      </p>
+      <button class="toggle-details">Learn More</button>
+      <div class="details hidden">
+        <h3>Project Overview</h3>
+        <p>
+          <strong>First part:</strong> Analyze the existing software, identify
+          user needs, derive requirements, and create a lo-fi interactive
+          prototype.
+        </p>
+        <p>
+          <strong>Second part:</strong> Develop two functional prototypes.
+          Conduct user testing and analyze usability challenges to improve the
+          solution.
+        </p>
+
+        <h3>DSL Project Context</h3>
+        <p>
+          The project supports further development of educational software used
+          in the Digital Sustainability Lab. Students participate as target
+          users to guide improvements integrated through agile workflows. Key
+          goals include enhanced usability, inclusion of feedback, and improved
+          software quality from a student-centric perspective.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <img src="./assets/images/mycareer.png" alt="MyCareer EDA Project" />
+      <div class="tags">
+        <span>Python</span><span>Pandas</span><span>DataViz</span
+        ><span>Jupyter</span>
+      </div>
+      <h2>MyCareer – Career Path Analysis</h2>
+      <p>
+        Data exploration project using a Jupyter Notebook to visualize career
+        and salary trends across fields like tech and finance.
+      </p>
+      <button class="toggle-details">Learn More</button>
+      <div class="details hidden">
+        <h3>Project Overview</h3>
+        <p>
+          This project focused on analyzing real-world job data using pandas and
+          matplotlib. It explored patterns in salary distribution, job
+          satisfaction, and emerging career fields.
+        </p>
+
+        <h3>Sample Visualization</h3>
+        <pre><code># Get the most recent year from metadata
+def get_latest_year():
+    metadata_response = requests.get(url)
+    if metadata_response.status_code == 200:
+        metadata = metadata_response.json()
+        years = [int(item) for item in metadata['variables'][0]['values']]
+        return str(max(years))
+    else:
+        raise ValueError(f\"Error fetching metadata: {metadata_response.status_code}\")</code></pre>
+
+        <h3>Highlights</h3>
+        <ul>
+          <li>Identified high-paying tech and finance roles</li>
+          <li>
+            Found a positive correlation between remote work and satisfaction
+          </li>
+          <li>Exported notebook as standalone HTML documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

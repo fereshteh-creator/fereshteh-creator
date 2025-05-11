@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
+  font-family: sans-serif;
 }
 *,
 *::before,
@@ -16,8 +17,13 @@ body {
   box-sizing: inherit;
 }
 
-h2 {
-  color: white;
+#about h1 {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  margin-bottom: 3rem;
 }
 
 p {
@@ -25,37 +31,183 @@ p {
 }
 
 /* About Section */
-.about-container {
+.about-section {
+  padding: 80px 20px;
+  background-color: #141820;
+  color: white;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.about-header h2 {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about-header .line {
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    rgb(20, 24, 32),
+    rgba(233, 184, 80, 0.5),
+    rgba(58, 120, 202, 0.13)
+  );
+  border-radius: 999px;
+  margin: 0 auto 20px;
+}
+
+.about-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .about-grid {
+    column-gap: 200px; /* wider horizontal gap for desktops */
+  }
+}
+.about-text {
+  flex: 1 1 45%;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.about-text p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.quote-box {
+  background-color: #1f1f2b;
+  border: 1px solid #333;
+  border-left: 4px solid #60a5fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.quote-box .quote {
+  font-style: italic;
+  color: white;
+}
+
+.quote-box .author {
+  text-align: right;
+  color: #60a5fa;
+  margin-top: 0.5rem;
+}
+
+.about-icons {
+  flex: 1 1 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+  .about-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .about-icons {
+    grid-template-columns: 1fr; /* single column for tablets and phones */
+  }
+}
+
+.icon-card {
+  background-color: #1e1e2e;
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.icon-card:hover {
+  transform: scale(1.05);
+}
+
+.icon-card img {
+  height: 36px;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.icon-card:hover img {
+  filter: none;
+}
+
+.icon-card h4 {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.about-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #1a1c22, #22242c);
+  border: 1px solid #333;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 60px;
   align-items: center;
-  justify-content: flex-start;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
+  gap: 2rem;
 }
-#about {
-  text-align: center;
-  padding: 50px 20px;
-  margin-bottom: 50px; /* Adds space between About and Skills */
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+
+.highlight-icon img {
+  height: 80px;
 }
+
+.highlight-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.highlight-text p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
 /* Skills Section */
 .skills {
   text-align: center;
   margin: 50px 0;
 }
+.skills h2 {
+  color: white;
+}
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -94,6 +246,7 @@ p {
 .skill-card:hover img {
   filter: grayscale(0%);
 }
+
 .footer-container {
   max-width: 1200px;
   width: 100%;

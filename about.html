@@ -1,27 +1,91 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
-  <link rel="stylesheet" href="stylesAbout.css" />
-  <link rel="stylesheet" href="stylesHeader.css" />
-  <link rel="stylesheet" href="stylesFooter.css" />
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="stylesAbout.css" />
+    <link rel="stylesheet" href="stylesHeader.css" />
+    <link rel="stylesheet" href="stylesFooter.css" />
+  </head>
 
-<body>
-  <div class="about-container">
-    <div id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a student of Digital Business and AI and currently with the focus on
-        Data Science and AI Applications. Passionate to always learn new skills
-        and build my Career.
-      </p>
+  <body>
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-header">
+          <h2>About Me</h2>
+          <div class="line"></div>
+          <p>
+            As a Business IT student with a focus on Data Science, I'm
+            passionate about leveraging data to solve complex business problems.
+          </p>
+        </div>
 
-      <!-- 🔥 Skills section will be inserted here dynamically -->
-      <div id="skills-container"></div>
-    </div>
-  </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>My Journey</h3>
+            <p>
+              My academic journey in Business IT has equipped me with a unique
+              blend of business acumen and technical expertise. Majoring in Data
+              Science, I've developed a deep understanding of statistical
+              analysis, machine learning, and data visualization.
+            </p>
+            <p>
+              I enjoy tackling challenging data problems and transforming raw
+              information into actionable insights. My projects span from
+              natural language processing to predictive modeling, always with a
+              focus on business applications.
+            </p>
 
-  <!-- ✅ Load script.js correctly -->
-  <script src="script.js"></script>
-</body>
+            <div class="quote-box">
+              <p class="quote">
+                "Data is the new oil. It's valuable, but if unrefined it cannot
+                really be used."
+              </p>
+              <p class="author">— Clive Humby</p>
+            </div>
+          </div>
+
+          <div class="about-icons">
+            <div class="icon-card">
+              <img src="assets/icons/database.svg" alt="Data Engineering" />
+              <h4>Data Engineering</h4>
+            </div>
+            <div class="icon-card">
+              <img src="assets/icons/brain.svg" alt="Machine Learning" />
+              <h4>Machine Learning</h4>
+            </div>
+            <div class="icon-card">
+              <img src="assets/icons/bar-chart.svg" alt="Data Visualization" />
+              <h4>Data Visualization</h4>
+            </div>
+            <div class="icon-card">
+              <img src="assets/icons/sigma.svg" alt="Statistical Analysis" />
+              <h4>Statistical Analysis</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <div class="highlight-icon">
+            <img src="assets/icons/line-chart.svg" alt="Business Data" />
+          </div>
+          <div class="highlight-text">
+            <h3>Business IT Meets Data Science</h3>
+            <p>
+              My specialization lies at the intersection of business
+              intelligence and data science. I'm skilled in analyzing business
+              requirements, designing data solutions, and implementing machine
+              learning models that deliver real business value.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills-container"></div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

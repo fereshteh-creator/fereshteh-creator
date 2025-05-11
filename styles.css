@@ -3,6 +3,7 @@ html,
 body {
   background-color: #141820;
   height: 100%;
+  font-family: sans-serif;
 }
 .hero {
   position: relative;
@@ -190,7 +191,7 @@ body {
 .hero-title {
   font-size: 2rem;
   font-weight: bold;
-  font-family: serif;
+  font-family: sans-serif;
   color: azure;
   margin-bottom: -1%;
 }

@@ -1,0 +1,1264 @@
+ 
+	<!DOCTYPE html>
+<html lang="en-GB"> 
+
+
+
+	<head>
+  
+	<script>
+  
+  function getCookie(cname) {
+	  var name = cname + "=";
+	  var decodedCookie = decodeURIComponent(document.cookie);
+	  var ca = decodedCookie.split(';');
+	  for(var i = 0; i <ca.length; i++) {
+		  var c = ca[i];
+		  while (c.charAt(0) == ' ') {
+		  c = c.substring(1);
+		  }
+		  if (c.indexOf(name) == 0) {
+		  return c.substring(name.length, c.length);
+		  }
+	  }
+	  return ""; 
+	  }
+
+
+function recommenderJobs()
+{  
+  jQuery.ajax({
+	  
+	  url : "https://www.irishjobs.ie/RecommenderJobsPerJS?jsGuid=" + getCookie('JSId') ,
+	  type: "POST",					
+	  success: function(data, textStatus, jqXHR)
+	  {
+		  if (data === "" || !data.includes('similar-job-listings')  ) {  
+		   $(".rec-module").hide();  
+		  }						
+		else {
+		  $("#recommenderJobsDiv").html(data);                        
+			$(".rec-module").show();
+	  
+		}
+		var numItems = $(data);                       
+		if (numItems.find(".similar-job-listings").length === 0) {                           
+		   $(".rec-module").hide();                          
+		}
+	  },
+	  done: function (jqXHR, textStatus, errorThrown) 
+	  {                       
+		   $(".rec-job-listing").slice(0, 3).show();
+			  $("#showMoreRec").on('click', function (e) {
+				  e.preventDefault();
+				  $(".rec-job-listing:hidden").slice(0, 3).slideDown();
+				  if ($(".rec-job-listing:hidden").length == 0) {
+					  $("#showMoreRec").hide();
+				  }
+			  });                      
+	  },
+	  error: function (jqXHR, textStatus, errorThrown) 
+	  {
+   
+	  }
+  });
+}
+
+
+
+recommenderJobs(); 
+
+</script>
+
+
+  
+
+          
+          
+
+
+  
+  
+				<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+				<style type="text/css">
+					.heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+											.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+					.heateor_sss_horizontal_sharing .heateorSssTCBackground{
+				color:#666;
+			}
+					.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+				.heateor_sss_vertical_sharing .heateorSssTCBackground{
+			color:#666;
+		}
+						.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}@media screen and (max-width:783px) {.heateor_sss_floating_follow_icons_container{display:none!important}}		</style>
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v17.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Female Graduates Expect to Earn 11% Less Than Male Counterparts - IrishJobs Career Advice</title>
+	<meta name="description" content="Discover the latest insights and figures from Universum regarding gender pay and expected salaries in Ireland for students and graduates." />
+	<link rel="canonical" href="https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Female Graduates Expect to Earn 11% Less Than Male Counterparts - IrishJobs Career Advice" />
+	<meta property="og:description" content="Discover the latest insights and figures from Universum regarding gender pay and expected salaries in Ireland for students and graduates." />
+	<meta property="og:url" content="https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/" />
+	<meta property="og:site_name" content="IrishJobs Career Advice" />
+	<meta property="article:author" content="https://www.facebook.com/irishjobs.ie" />
+	<meta property="article:published_time" content="2023-09-04T07:55:16+00:00" />
+	<meta property="article:modified_time" content="2023-09-27T14:30:03+00:00" />
+	<meta property="og:image" content="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="768" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@https://twitter.com/irishjobsie" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="IrishJobs Team" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="5 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.irishjobs.ie/careeradvice/#website","url":"https://www.irishjobs.ie/careeradvice/","name":"IrishJobs Career Advice","description":"Ask the Experts,CV advice,CV Templates,Interview advice,Job Hunting,Salaries,Training","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.irishjobs.ie/careeradvice/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"ImageObject","@id":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/#primaryimage","inLanguage":"en-GB","url":"https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg","contentUrl":"https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg","width":1024,"height":768},{"@type":"WebPage","@id":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/#webpage","url":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/","name":"Female Graduates Expect to Earn 11% Less Than Male Counterparts - IrishJobs Career Advice","isPartOf":{"@id":"https://www.irishjobs.ie/careeradvice/#website"},"primaryImageOfPage":{"@id":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/#primaryimage"},"datePublished":"2023-09-04T07:55:16+00:00","dateModified":"2023-09-27T14:30:03+00:00","author":{"@id":"https://www.irishjobs.ie/careeradvice/#/schema/person/2c50ae4a7d8ee73eaf941ba16c576c3f"},"description":"Discover the latest insights and figures from Universum regarding gender pay and expected salaries in Ireland for students and graduates.","breadcrumb":{"@id":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/"]}]},{"@type":"BreadcrumbList","@id":"https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Female Graduates Expect to Earn 11% Less Than Male Counterparts"}]},{"@type":"Person","@id":"https://www.irishjobs.ie/careeradvice/#/schema/person/2c50ae4a7d8ee73eaf941ba16c576c3f","name":"IrishJobs Team","image":{"@type":"ImageObject","@id":"https://www.irishjobs.ie/careeradvice/#personlogo","inLanguage":"en-GB","url":"https://www.irishjobs.ie/careeradvice/wp-content/uploads/Pebbles-Blog-500x500-1-120x120.jpg","contentUrl":"https://www.irishjobs.ie/careeradvice/wp-content/uploads/Pebbles-Blog-500x500-1-120x120.jpg","caption":"IrishJobs Team"},"description":"IrishJobs.ie has been helping people find the job they want for over 20 years. Our team is delighted to share our job hunting tips and advice with you.","sameAs":["https://www.irishjobs.ie","https://www.facebook.com/irishjobs.ie","https://www.instagram.com/irishjobsie/","https://twitter.com/https://twitter.com/irishjobsie"],"url":"https://www.irishjobs.ie/careeradvice/author/irishjobs-team/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.irishjobs.ie' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="IrishJobs Career Advice &raquo; Feed" href="https://www.irishjobs.ie/careeradvice/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IrishJobs Career Advice &raquo; Comments Feed" href="https://www.irishjobs.ie/careeradvice/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.irishjobs.ie\/careeradvice\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.irishjobs.ie/careeradvice/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-frontend-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=3.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=3.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpb-google-fonts-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C500i%2C600%2C700&#038;display=swap&#038;ver=6.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-font-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/visual-composer-starter-font.min.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-style-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/slick.min.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-general-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/style.min.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-woocommerce-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/woocommerce.min.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-responsive-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/responsive.min.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-style-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/2023-harmon-ij-career-advice/style.css?ver=6.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-fonts-css' href='//fonts.googleapis.com/css?family=Roboto%3Aregular%2Citalic|Playfair+Display%3Aregular%2Citalic%26subset%3Dcyrillic%2Ccyrillic-ext%2Cdevanagari%2Cgreek%2Cgreek-ext%2Ckhmer%2Clatin%2Clatin-ext%2Cvietnamese' type='text/css' media='screen' />
+<link rel='stylesheet' id='visualcomposerstarter-custom-style-css' href='https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/css/customizer-custom.css?ver=6.7.1' type='text/css' media='all' />
+<style id='visualcomposerstarter-custom-style-inline-css' type='text/css'>
+
+	/*Body fonts and style*/
+	body,
+	#main-menu ul li ul li,
+	.comment-content cite,
+	.entry-content cite,
+	#add_payment_method .cart-collaterals .cart_totals table small,
+	.woocommerce-cart .cart-collaterals .cart_totals table small,
+	.woocommerce-checkout .cart-collaterals .cart_totals table small,
+	.visualcomposerstarter.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal td,
+	.visualcomposerstarter.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal th,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart,
+	.visualcomposerstarter.woocommerce .woocommerce-ordering,
+	.visualcomposerstarter.woocommerce .woocommerce-result-count,
+	.visualcomposerstarter legend,
+	.visualcomposerstarter.woocommerce-account .woocommerce-MyAccount-content a.button
+	 { font-family: Roboto; }
+	 body,
+	 .sidebar-widget-area a:hover, .sidebar-widget-area a:focus,
+	 .sidebar-widget-area .widget_recent_entries ul li:hover, .sidebar-widget-area .widget_archive ul li:hover, .sidebar-widget-area .widget_categories ul li:hover, .sidebar-widget-area .widget_meta ul li:hover, .sidebar-widget-area .widget_recent_entries ul li:focus, .sidebar-widget-area .widget_archive ul li:focus, .sidebar-widget-area .widget_categories ul li:focus, .sidebar-widget-area .widget_meta ul li:focus, .visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a { color: #555555; }
+	  .comment-content table,
+	  .entry-content table { border-color: #555555; }
+	  .entry-full-content .entry-author-data .author-biography,
+	  .entry-full-content .entry-meta,
+	  .nav-links.post-navigation a .meta-nav,
+	  .search-results-header h4,
+	  .entry-preview .entry-meta li,
+	  .entry-preview .entry-meta li a,
+	  .entry-content .gallery-caption,
+	  .comment-content blockquote,
+	  .entry-content blockquote,
+	  .wp-caption .wp-caption-text,
+	  .comments-area .comment-list .comment-metadata a { color: #777777; }
+	  .comments-area .comment-list .comment-metadata a:hover,
+	  .comments-area .comment-list .comment-metadata a:focus { border-bottom-color: #777777; }
+	  a,
+	  .comments-area .comment-list .reply a,
+	  .comments-area span.required,
+	  .comments-area .comment-subscription-form label:before,
+	  .entry-preview .entry-meta li a:hover:before,
+	  .entry-preview .entry-meta li a:focus:before,
+	  .entry-preview .entry-meta li.entry-meta-category:hover:before,
+	  .entry-content p a:hover,
+	  .entry-content ol a:hover,
+	  .entry-content ul a:hover,
+	  .entry-content table a:hover,
+	  .entry-content datalist a:hover,
+	  .entry-content blockquote a:hover,
+	  .entry-content dl a:hover,
+	  .entry-content address a:hover,
+	  .entry-content p a:focus,
+	  .entry-content ol a:focus,
+	  .entry-content ul a:focus,
+	  .entry-content table a:focus,
+	  .entry-content datalist a:focus,
+	  .entry-content blockquote a:focus,
+	  .entry-content dl a:focus,
+	  .entry-content address a:focus,
+	  .entry-content ul > li:before,
+	  .comment-content p a:hover,
+	  .comment-content ol a:hover,
+	  .comment-content ul a:hover,
+	  .comment-content table a:hover,
+	  .comment-content datalist a:hover,
+	  .comment-content blockquote a:hover,
+	  .comment-content dl a:hover,
+	  .comment-content address a:hover,
+	  .comment-content p a:focus,
+	  .comment-content ol a:focus,
+	  .comment-content ul a:focus,
+	  .comment-content table a:focus,
+	  .comment-content datalist a:focus,
+	  .comment-content blockquote a:focus,
+	  .comment-content dl a:focus,
+	  .comment-content address a:focus,
+	  .comment-content ul > li:before,
+	  .sidebar-widget-area .widget_recent_entries ul li,
+	  .sidebar-widget-area .widget_archive ul li,
+	  .sidebar-widget-area .widget_categories ul li,
+	  .sidebar-widget-area .widget_meta ul li { color: #557cbf; }     
+	  .comments-area .comment-list .reply a:hover,
+	  .comments-area .comment-list .reply a:focus,
+	  .comment-content p a,
+	  .comment-content ol a,
+	  .comment-content ul a,
+	  .comment-content table a,
+	  .comment-content datalist a,
+	  .comment-content blockquote a,
+	  .comment-content dl a,
+	  .comment-content address a,
+	  .entry-content p a,
+	  .entry-content ol a,
+	  .entry-content ul a,
+	  .entry-content table a,
+	  .entry-content datalist a,
+	  .entry-content blockquote a,
+	  .entry-content dl a,
+	  .entry-content address a { border-bottom-color: #557cbf; }    
+	  .entry-content blockquote, .comment-content { border-left-color: #557cbf; }
+	  
+	  html, #main-menu ul li ul li { font-size: 16px }
+	  body, #footer, .footer-widget-area .widget-title { line-height: 1.7; }
+	  body {
+		letter-spacing: 0.01rem;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: none;
+	  }
+	  
+	  .comment-content address,
+	  .comment-content blockquote,
+	  .comment-content datalist,
+	  .comment-content dl,
+	  .comment-content ol,
+	  .comment-content p,
+	  .comment-content table,
+	  .comment-content ul,
+	  .entry-content address,
+	  .entry-content blockquote,
+	  .entry-content datalist,
+	  .entry-content dl,
+	  .entry-content ol,
+	  .entry-content p,
+	  .entry-content table,
+	  .entry-content ul {
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	  }
+	  
+	  /*Buttons font and style*/
+	  .comments-area .form-submit input[type=submit],
+	  .blue-button { 
+			background-color: #557cbf; 
+			color: #f4f4f4;
+			font-family: Playfair Display;
+			font-size: 16px;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: 0.01rem;
+			line-height: 1;
+			text-transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+	  }
+	  .visualcomposerstarter .products .added_to_cart {
+			font-family: Playfair Display;
+	  }
+	  .comments-area .form-submit input[type=submit]:hover, .comments-area .form-submit input[type=submit]:focus,
+	  .blue-button:hover, .blue-button:focus, 
+	  .entry-content p a.blue-button:hover { 
+			background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	  
+	  .nav-links.archive-navigation .page-numbers,
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers {
+	        background-color: #557cbf; 
+			color: #f4f4f4;
+	  }
+	  
+	  .nav-links.archive-navigation a.page-numbers:hover, 
+	  .nav-links.archive-navigation a.page-numbers:focus, 
+	  .nav-links.archive-navigation .page-numbers.current,
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover, 
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers:focus, 
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers.current {
+	        background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	  .visualcomposerstarter.woocommerce button.button,
+	  .visualcomposerstarter.woocommerce a.button.product_type_simple,
+	  .visualcomposerstarter.woocommerce a.button.product_type_grouped,
+	  .visualcomposerstarter.woocommerce a.button.product_type_variable,
+	  .visualcomposerstarter.woocommerce a.button.product_type_external,
+	  .visualcomposerstarter .woocommerce .buttons a.button.wc-forward,
+	  .visualcomposerstarter .woocommerce #place_order,
+	  .visualcomposerstarter .woocommerce .button.checkout-button,
+	  .visualcomposerstarter .woocommerce .button.wc-backward,
+	  .visualcomposerstarter .woocommerce .track_order .button,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button,
+	  .visualcomposerstarter .woocommerce a.button,
+	  .visualcomposerstarter .woocommerce button.button,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit
+	   {
+	  		background-color: #557cbf; 
+			color: #f4f4f4;
+			font-family: Playfair Display;
+			font-size: 16px;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: 0.01rem;
+			line-height: 1;
+			text-transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+	  }
+	  .visualcomposerstarter.woocommerce button.button.alt.disabled {
+            background-color: #557cbf; 
+			color: #f4f4f4;
+	  }
+	  .visualcomposerstarter.woocommerce a.button:hover,
+	  .visualcomposerstarter.woocommerce a.button:focus,
+	  .visualcomposerstarter.woocommerce button.button:hover,
+	  .visualcomposerstarter.woocommerce button.button:focus,
+	  .visualcomposerstarter .woocommerce #place_order:hover,
+	  .visualcomposerstarter .woocommerce .button.checkout-button:hover,
+	  .visualcomposerstarter .woocommerce .button.wc-backward:hover,
+	  .visualcomposerstarter .woocommerce .track_order .button:hover,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button:hover,
+	  .visualcomposerstarter .woocommerce a.button:hover,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit:hover
+	  .visualcomposerstarter .woocommerce #place_order:focus,
+	  .visualcomposerstarter .woocommerce .button.checkout-button:focus,
+	  .visualcomposerstarter .woocommerce .button.wc-backward:focus,
+	  .visualcomposerstarter .woocommerce .track_order .button:focus,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button:focus,
+	  .visualcomposerstarter .woocommerce a.button:focus,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit:focus { 
+			background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	
+	/*Headers fonts and style*/
+	.header-widgetised-area .widget_text,
+	 #main-menu > ul > li > a, 
+	 .entry-full-content .entry-author-data .author-name, 
+	 .nav-links.post-navigation a .post-title, 
+	 .comments-area .comment-list .comment-author,
+	 .comments-area .comment-list .reply a,
+	 .comments-area .comment-form-comment label,
+	 .comments-area .comment-form-author label,
+	 .comments-area .comment-form-email label,
+	 .comments-area .comment-form-url label,
+	 .comment-content blockquote,
+	 .entry-content blockquote { font-family: Playfair Display; }
+	.entry-full-content .entry-author-data .author-name,
+	.entry-full-content .entry-meta a,
+	.nav-links.post-navigation a .post-title,
+	.comments-area .comment-list .comment-author,
+	.comments-area .comment-list .comment-author a,
+	.search-results-header h4 strong,
+	.entry-preview .entry-meta li a:hover,
+	.entry-preview .entry-meta li a:focus { color: #333333; }
+	
+	.entry-full-content .entry-meta a,
+	.comments-area .comment-list .comment-author a:hover,
+	.comments-area .comment-list .comment-author a:focus,
+	.nav-links.post-navigation a .post-title { border-bottom-color: #333333; }
+
+	 
+	 h1 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 42px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 2.125rem;
+		text-transform: none;  
+	 }
+	 h1 a {color: #557cbf;}
+	 h1 a:hover, h1 a:focus {color: #557cbf;}
+	 h2 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 36px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h2 a {color: #557cbf;}
+	 h2 a:hover, h2 a:focus {color: #557cbf;}
+	 h3 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 30px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h3 a {color: #557cbf;}
+	 h3 a:hover, h3 a:focus {color: #557cbf;}
+	 h4 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 22px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h4 a {color: #557cbf;}
+	 h4 a:hover, h4 a:focus {color: #557cbf;}
+	 h5 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 22px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h5 a {color: #557cbf;}
+	 h5 a:hover, h5 a:focus {color: #557cbf;}
+	 h6 {
+		color: #333333;
+		font-family: Playfair Display;
+		font-size: 16px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h6 a {color: #557cbf;}
+	 h6 a:hover, h6 a:focus {color: #557cbf;}
+	
+		/*Header and menu area background color*/
+		#header .navbar .navbar-wrapper,
+		body.navbar-no-background #header .navbar.fixed.scroll,
+		body.header-full-width-boxed #header .navbar,
+		body.header-full-width #header .navbar {
+			background-color: #ffffff;
+		}
+		
+		@media only screen and (min-width: 768px) {
+			body:not(.menu-sandwich) #main-menu ul li ul { background-color: #ffffff; }
+		}
+		body.navbar-no-background #header .navbar {background-color: transparent;}
+		
+	.visualcomposerstarter.woocommerce ul.products li.product .price,
+	.visualcomposerstarter.woocommerce div.product p.price,
+	.visualcomposerstarter.woocommerce div.product p.price ins,
+	.visualcomposerstarter.woocommerce div.product span.price,
+	.visualcomposerstarter.woocommerce div.product span.price ins,
+	.visualcomposerstarter.woocommerce.widget .quantity,
+	.visualcomposerstarter.woocommerce.widget del,
+	.visualcomposerstarter.woocommerce.widget ins,
+	.visualcomposerstarter.woocommerce.widget span.woocommerce-Price-amount.amount,
+	.visualcomposerstarter.woocommerce p.price ins,
+	.visualcomposerstarter.woocommerce p.price,
+	.visualcomposerstarter.woocommerce span.price,
+	.visualcomposerstarter.woocommerce span.price ins,
+	.visualcomposerstarter .woocommerce.widget span.amount,
+	.visualcomposerstarter .woocommerce.widget ins {
+		color: #2b4b80
+	}
+	
+	.visualcomposerstarter.woocommerce span.price del,
+	.visualcomposerstarter.woocommerce p.price del,
+	.visualcomposerstarter.woocommerce p.price del span,
+	.visualcomposerstarter.woocommerce span.price del span,
+	.visualcomposerstarter .woocommerce.widget del,
+	.visualcomposerstarter .woocommerce.widget del span.amount,
+	.visualcomposerstarter.woocommerce ul.products li.product .price del {
+		color: #d5d5d5
+	}
+	
+	.visualcomposerstarter .vct-cart-items-count {
+	    background: #2b4b80;
+	    color: #fff;
+	}
+	.visualcomposerstarter .vct-cart-wrapper svg g>g {
+	    fill: #2b4b80;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .entry-categories a,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a
+	{
+		color: #d5d5d5;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .entry-categories a:hover,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a:hover,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
+	.visualcomposerstarter.woocommerce div.product .entry-categories a:focus,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a:focus,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a:focus,
+	{
+		color: #2b4b80;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li.active a
+	{
+		color: #2b4b80;
+	}
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li.active a:before
+	{
+		background: #2b4b80;
+	}
+	
+	.woocommerce button.button[name="update_cart"],
+    .button[name="apply_coupon"],
+    .vct-checkout-button,
+    .woocommerce button.button:disabled, 
+    .woocommerce button.button:disabled[disabled]
+	{
+		color: #4e4e4e;
+	}
+	.visualcomposerstarter .woocommerce.widget.widget_price_filter .ui-slider .ui-slider-handle,
+	.visualcomposerstarter .woocommerce.widget.widget_price_filter .ui-slider .ui-slider-range
+	{
+		background-color: #2b4b80;
+	}
+	.visualcomposerstarter .woocommerce.widget li a
+	{
+		color: #000;
+	}
+	.visualcomposerstarter .woocommerce.widget li a:hover,
+	.visualcomposerstarter .woocommerce.widget li a:focus
+	{
+		color: #2b4b80;
+	}
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart a.remove:before,
+	.visualcomposerstarter .woocommerce.widget .cart_list li a.remove:before,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart a.remove:after,
+	.visualcomposerstarter .woocommerce.widget .cart_list li a.remove:after
+	{
+		background-color: #d5d5d5;
+	}
+</style>
+<link rel='stylesheet' id='heateor_sss_frontend_css-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/sassy-social-share/public/css/sassy-social-share-public.css?ver=3.3.31' type='text/css' media='all' />
+<link rel='stylesheet' id='heateor_sss_sharing_default_svg-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/sassy-social-share/admin/css/sassy-social-share-svg.css?ver=3.3.31' type='text/css' media='all' />
+<link rel='stylesheet' id='yarpp-thumbnails-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/yet-another-related-posts-plugin/style/styles_thumbnails.css?ver=5.27.7' type='text/css' media='all' />
+<style id='yarpp-thumbnails-inline-css' type='text/css'>
+.yarpp-thumbnails-horizontal .yarpp-thumbnail {width: 130px;height: 170px;margin: 5px;margin-left: 0px;}.yarpp-thumbnail > img, .yarpp-thumbnail-default {width: 120px;height: 120px;margin: 5px;}.yarpp-thumbnails-horizontal .yarpp-thumbnail-title {margin: 7px;margin-top: 0px;width: 120px;}.yarpp-thumbnail-default > img {min-height: 120px;min-width: 120px;}
+</style>
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='vc_lte_ie9-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.5' type='text/css' media='screen' />
+<![endif]-->
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.0.5' type='text/css' media='all' />
+    <script type="text/javascript">
+        var settings = {"totaljobs_tracking_report_suite_id":"stepstone-saongroup-Irishjobs-prod-2","totaljobs_tracking_server":"stepstone.d1.sc.omtrdc.net","totaljobs_tracking_script_url":"https:\/\/www.irishjobs.ie\/CDNCached\/AppMeasurementCustom.min.js"};
+    </script>
+    <script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var visualcomposerstarter = {"ajax_url":"https:\/\/www.irishjobs.ie\/careeradvice\/wp-admin\/admin-ajax.php","nonce":"4f0ce406af","woo_coupon_form":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/analytics/js/totaljobs-report.js?ver=6.7.1" id="totaljobs-report-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/CDNCached/AppMeasurementCustom.min.js?ver=6.7.1" id="totaljobs-appmeasurement-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/analytics/js/totaljobs.js?ver=6.7.1" id="totaljobs-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=6.7.1" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=6.7.1" id="ppress-select2-js"></script>
+<link rel="https://api.w.org/" href="https://www.irishjobs.ie/careeradvice/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.irishjobs.ie/careeradvice/wp-json/wp/v2/posts/33253" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.irishjobs.ie/careeradvice/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.irishjobs.ie/careeradvice/?p=33253' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.irishjobs.ie/careeradvice/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.irishjobs.ie/careeradvice/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F&#038;format=xml" />
+    <noscript>
+        <img src="//stepstone.d1.sc.omtrdc.net/b/ss/stepstone-saongroup-Irishjobs-prod-2/1/H.25.2--NS/0?pageName=female-graduates-expect-to-earn-11-less-than-male-counterparts/&[AQB]&cdp=4&[AQE]" height="1" width="1" border="0" alt=""/>
+    </noscript>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!-- Hotjar Tracking Code for https://www.irishjobs.ie/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:332225,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+	
+
+<script type="text/javascript">
+(function(a,b,c,d) { a='https://tags.tiqcdn.com/utag/stepstone/stepstone-uk/prod/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); }
+)();
+</script><style type="text/css">.saboxplugin-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border:1px solid #eee;width:100%;clear:both;display:block;overflow:hidden;word-wrap:break-word;position:relative}.saboxplugin-wrap .saboxplugin-gravatar{float:left;padding:0 20px 20px 20px}.saboxplugin-wrap .saboxplugin-gravatar img{max-width:100px;height:auto;border-radius:0;}.saboxplugin-wrap .saboxplugin-authorname{font-size:18px;line-height:1;margin:20px 0 0 20px;display:block}.saboxplugin-wrap .saboxplugin-authorname a{text-decoration:none}.saboxplugin-wrap .saboxplugin-authorname a:focus{outline:0}.saboxplugin-wrap .saboxplugin-desc{display:block;margin:5px 20px}.saboxplugin-wrap .saboxplugin-desc a{text-decoration:underline}.saboxplugin-wrap .saboxplugin-desc p{margin:5px 0 12px}.saboxplugin-wrap .saboxplugin-web{margin:0 20px 15px;text-align:left}.saboxplugin-wrap .sab-web-position{text-align:right}.saboxplugin-wrap .saboxplugin-web a{color:#ccc;text-decoration:none}.saboxplugin-wrap .saboxplugin-socials{position:relative;display:block;background:#fcfcfc;padding:5px;border-top:1px solid #eee}.saboxplugin-wrap .saboxplugin-socials a svg{width:20px;height:20px}.saboxplugin-wrap .saboxplugin-socials a svg .st2{fill:#fff; transform-origin:center center;}.saboxplugin-wrap .saboxplugin-socials a svg .st1{fill:rgba(0,0,0,.3)}.saboxplugin-wrap .saboxplugin-socials a:hover{opacity:.8;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;box-shadow:none!important;-webkit-box-shadow:none!important}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color{box-shadow:none;padding:0;border:0;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;display:inline-block;color:#fff;font-size:0;text-decoration:inherit;margin:5px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;overflow:hidden}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-grey{text-decoration:inherit;box-shadow:none;position:relative;display:-moz-inline-stack;display:inline-block;vertical-align:middle;zoom:1;margin:10px 5px;color:#444;fill:#444}.clearfix:after,.clearfix:before{content:' ';display:table;line-height:0;clear:both}.ie7 .clearfix{zoom:1}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitch{border-color:#38245c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-addthis{border-color:#e91c00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-behance{border-color:#003eb0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-delicious{border-color:#06c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-deviantart{border-color:#036824}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-digg{border-color:#00327c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-dribbble{border-color:#ba1655}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-facebook{border-color:#1e2e4f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-flickr{border-color:#003576}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-github{border-color:#264874}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-google{border-color:#0b51c5}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-googleplus{border-color:#96271a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-html5{border-color:#902e13}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-instagram{border-color:#1630aa}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-linkedin{border-color:#00344f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-pinterest{border-color:#5b040e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-reddit{border-color:#992900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-rss{border-color:#a43b0a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-sharethis{border-color:#5d8420}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-skype{border-color:#00658a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-soundcloud{border-color:#995200}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-spotify{border-color:#0f612c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stackoverflow{border-color:#a95009}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-steam{border-color:#006388}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-user_email{border-color:#b84e05}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stumbleUpon{border-color:#9b280e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-tumblr{border-color:#10151b}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitter{border-color:#0967a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vimeo{border-color:#0d7091}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-windows{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-whatsapp{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-wordpress{border-color:#0f3647}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-yahoo{border-color:#14002d}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-youtube{border-color:#900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-xing{border-color:#000202}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mixcloud{border-color:#2475a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vk{border-color:#243549}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-medium{border-color:#00452c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-quora{border-color:#420e00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-meetup{border-color:#9b181c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-goodreads{border-color:#000}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-snapchat{border-color:#999700}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-500px{border-color:#00557f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mastodont{border-color:#185886}.sabox-plus-item{margin-bottom:20px}@media screen and (max-width:480px){.saboxplugin-wrap{text-align:center}.saboxplugin-wrap .saboxplugin-gravatar{float:none;padding:20px 0;text-align:center;margin:0 auto;display:block}.saboxplugin-wrap .saboxplugin-gravatar img{float:none;display:inline-block;display:-moz-inline-stack;vertical-align:middle;zoom:1}.saboxplugin-wrap .saboxplugin-desc{margin:0 10px 20px;text-align:center}.saboxplugin-wrap .saboxplugin-authorname{text-align:center;margin:10px 0 20px}}body .saboxplugin-authorname a,body .saboxplugin-authorname a:hover{box-shadow:none;-webkit-box-shadow:none}a.sab-profile-edit{font-size:16px!important;line-height:1!important}.sab-edit-settings a,a.sab-profile-edit{color:#0073aa!important;box-shadow:none!important;-webkit-box-shadow:none!important}.sab-edit-settings{margin-right:15px;position:absolute;right:0;z-index:2;bottom:10px;line-height:20px}.sab-edit-settings i{margin-left:5px}.saboxplugin-socials{line-height:1!important}.rtl .saboxplugin-wrap .saboxplugin-gravatar{float:right}.rtl .saboxplugin-wrap .saboxplugin-authorname{display:flex;align-items:center}.rtl .saboxplugin-wrap .saboxplugin-authorname .sab-profile-edit{margin-right:10px}.rtl .sab-edit-settings{right:auto;left:0}img.sab-custom-avatar{max-width:75px;}.saboxplugin-wrap {margin-top:0px; margin-bottom:0px; padding: 0px 0px }.saboxplugin-wrap .saboxplugin-authorname {font-size:18px; line-height:25px;}.saboxplugin-wrap .saboxplugin-desc p, .saboxplugin-wrap .saboxplugin-desc {font-size:14px !important; line-height:21px !important;}.saboxplugin-wrap .saboxplugin-web {font-size:14px;}.saboxplugin-wrap .saboxplugin-socials a svg {width:18px;height:18px;}</style><link rel="icon" href="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Stepstone-app-favicon.png" sizes="32x32" />
+<link rel="icon" href="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Stepstone-app-favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Stepstone-app-favicon.png" />
+<meta name="msapplication-TileImage" content="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Stepstone-app-favicon.png" />
+		<style type="text/css" id="wp-custom-css">
+			#header .navbar-brand img {
+    width: auto !important;
+    height: 34px !important;
+}
+
+#header .navbar .navbar-wrapper {
+    background: #010101;
+    color: #fff !important;
+    padding: 0;
+    margin: 16px 0px 16px 0px;
+}
+
+@media (max-width: 767px) {
+#header .navbar-header {
+    padding: 5px 0;
+}
+	
+	.arch-post {
+	display: flex;
+  height: 100%;
+  min-height: 0;	
+	}
+}
+
+
+
+/* author bios */ 
+
+
+		.page-author-wrapper{margin-bottom:25px;margin-bottom:40px;}
+
+		.author-desc{overflow: hidden;border-radius: 10px;
+    background: #eee;
+    padding: 15px;}
+
+		.author-name{margin-bottom:8px;font-size: 14px;}
+
+		.avatar{float:left;margin-right:25px;margin-top:2px;-webkit-border-radius: 120px;-moz-border-radius: 120px;border-radius: 120px;padding:3px;background: #fff;border:1px solid #eeeeee; width:80px; height 80px;}
+
+		.author-text b{padding:2px 4px;color:#fff;margin-right:4px;}
+		.author-social li{display: inline-block;}
+
+		.author-social li a{font-size: 16px;color:#555555;}
+		.author-social li a:hover{color:#888888;}
+
+@media (max-width: 767px) { 
+		.page-author-wrapper .entry-content img {  
+			margin-bottom: 15px;
+	}
+
+		.author-desc{
+			width: 100%;
+	}	
+	
+	.yarpp-related .yarpp-thumbnail-title {   
+    float: left;
+    width: 50% !important;
+}
+	
+
+.yarpp-related .yarpp-thumbnail-title {   
+    line-height: 20px;
+    padding-top: 0px;
+	margin-top: 8px;
+}
+	
+}
+
+/* salary tables */ 
+
+table td {
+	border: none !important;  
+}
+
+ tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.vc_btn3.vc_btn3-color-primary.vc_btn3-style-modern {
+    font-weight: 700;
+	font-family: "Helvetica","Arial",sans-serif;
+}
+
+		
+
+.normal-card .wpb_single_image img {
+    object-fit: cover;
+    max-width: 281px;
+}
+
+@media (max-width: 767px) { 
+	.normal-card .wpb_single_image img {
+    object-fit: cover;
+    max-width: 100% !important; 
+}
+	
+	.sg-cookie-container .btn.btn-accept:hover {
+    background: #0a9bc7!important;
+    border-color: #0a9bc7!important;
+}
+	
+	
+			</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><link id="stst-light-rebrand" rel="stylesheet" type="text/css" href="https://www.irishjobs.ie/careeradvice/wp-content/plugins/rebranding-plugin/css/2023-harmon-ij-career-advice.css?time=1734360362" />
+
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="/careeradvice/wp-content/themes/2023-harmon-ij-career-advice/assets/img/favicon.ico">
+  
+        <!-- fontawesome -->
+        <link rel='stylesheet' id='mew_fontawesome_load-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css?ver=5.7.2' type='text/css' media='all' />
+  		<link rel="stylesheet" id="font-awesome-css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel='stylesheet' id='font-awesome-latest-css'  href='/wp-content/plugins/mega-addons-for-visual-composer/css/font-awesome/css/all.css?ver=5.7.2' type='text/css' media='all' />
+  		<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/plugins/types/vendor/toolset/toolset-common/res/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='screen' />
+  
+  
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		
+	
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="W85AE-T8UFD-R3CLG-TZA52-TTWNW",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"W85AE-T8UFD-R3CLG-TZA52-TTWNW";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="wlc4nplijum7s2bavw4a-f-dcd9223f5-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1450031","ak.ai":parseInt("897891",10),"ak.ol":"0","ak.cr":49,"ak.ipv":4,"ak.proto":"h2","ak.rid":"79a6751","ak.r":24888,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"178.197.198.0","ak.cport":50616,"ak.gh":"80.67.82.117","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1746972088","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==6rFh0F0zUThQLp/RHSMN8hYB0io5SCJhZIKVghJa0iRmAasGJ+dp2BJySE87Hke83/+xZBmihrCsucljH/m2px6m0Kekxyvu9Q5+0VAr3ICVg+iEgKbdkZEZGWbXYlAbm8Avcfv2VfKsTpd2mr22YQkRRgjPtMEvbIus9CeT0iXB3/8KSn4N40TUgQYVvZa84EZFhinvZY31gEOfr6ADke30FaJt3iw2x45AFi4bNC+adYMFpSgJ0kVzjBIxwykLXMMtF2+m73t4futUETUu0KRvIDWbQvLBZTN9m77zEQCE+AMN4Qb3RyJmlvPRl6UkhBTZR0aTBD3/VdoIHA3iZPdIQOvjqmfJ92hGULwvnjkN0Zdnvv8gn4gLnj7BZvcgsFXLrHIp8FHJhzIpz8nSeGry/46QDitBnDzNvPEa3XM=","ak.pv":"93","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+
+<body class="post-template-default single single-post postid-33253 single-format-standard visualcomposerstarter wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
+              
+		<header id="header">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-wrapper clearfix">
+					<div class="navbar-header">
+						<div class="navbar-brand">
+							<a href="https://www.irishjobs.ie" id="sg-theme-logo">																
+								<img src="/careeradvice/wp-content/themes/2023-harmon-ij-career-advice/assets/img/logo.svg" class="new-sg-blog-logo" alt="IrishJobs.ie">							
+							
+							</a>
+						</div>
+																			<button type="button" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="sg-mobile-menu-text">Menu</span> 
+							</button>
+											</div>
+																<div id="main-menu">
+							<div class="button-close"><span class="vct-icon-close"></span></div>
+							<ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-30373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30373"><a href="https://www.irishjobs.ie/">Search Jobs</a></li>
+<li id="menu-item-30375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30375"><a href="https://www.irishjobs.ie/jobs">Browse</a></li>
+<li id="menu-item-30376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30376"><a href="https://www.irishjobs.ie/careeradvice/">Career Advice</a></li>
+<li id="menu-item-30377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30377"><a href="https://www.irishjobs.ie/account/signin?ReturnUrl=/">Login</a></li>
+</ul>																				</div><!--#main-menu-->
+									</div><!--.navbar-wrapper-->
+			</div><!--.container-->
+		</nav>
+				
+	</header>
+	 
+
+	<div class="sg-secondary-header">	
+
+			<div class="custom-menu-class"><ul id="menu-secondary-menu" class="menu"><li id="menu-item-31369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31369"><a href="https://www.irishjobs.ie/careeradvice/latest-news/">Latest News</a></li>
+<li id="menu-item-31370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31370"><a href="https://www.irishjobs.ie/careeradvice/brand-of-you/">#BrandofYou</a></li>
+<li id="menu-item-31371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31371"><a href="https://www.irishjobs.ie/careeradvice/cv-advice/">CV Advice</a></li>
+<li id="menu-item-31372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31372"><a href="https://www.irishjobs.ie/careeradvice/job-hunting/">Job Hunting</a></li>
+<li id="menu-item-31373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31373"><a href="https://www.irishjobs.ie/careeradvice/inside-story/">Inside Story</a></li>
+<li id="menu-item-31374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31374"><a href="https://www.irishjobs.ie/careeradvice/interview-advice/">Interview Advice</a></li>
+<li id="menu-item-31375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31375"><a href="https://www.irishjobs.ie/careeradvice/salaries/">Salaries</a></li>
+<li id="menu-item-31377" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-31377"><a href="https://www.irishjobs.ie/careeradvice/job-news/">Job News</a></li>
+</ul></div>	
+		
+	</div>
+<div class="container">
+	<div class="content-wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="main-content">
+					<article class="entry-full-content">
+						<div class="row">
+							<div class="col-md-9">
+								
+								<div class="col-md-12">
+								<!-- Move Featured Image to here --> 
+																			<div class="header-image">
+														<div class="container-fluid">
+				<div class="row">
+					<div class="fade-in-img">
+						<div class="fade-in-img-inner-wrap">
+							<img width="1024" height="768" src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg" class="attachment-visualcomposerstarter-featured-single-image-full size-visualcomposerstarter-featured-single-image-full wp-post-image" alt="" data-src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg" decoding="async" fetchpriority="high" srcset="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg 1024w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-300x225.jpg 300w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-800x600.jpg 800w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-150x113.jpg 150w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-768x576.jpg 768w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-848x636.jpg 848w" sizes="(max-width: 1024px) 100vw, 1024px" />							<noscript>
+								<img width="1024" height="768" src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header.jpg 1024w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-300x225.jpg 300w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-800x600.jpg 800w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-150x113.jpg 150w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-768x576.jpg 768w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/B2C-gender-pay-header-848x636.jpg 848w" sizes="(max-width: 1024px) 100vw, 1024px" />							</noscript>
+						</div>
+					</div>
+				</div>
+			</div>
+
+													</div>
+																		<!-- End Move Featured Image to here --> 									
+									<h1 class="entry-title">Female Graduates Expect to Earn 11% Less Than Male Counterparts</h1>
+<div class="entry-content">
+
+			<div class="entry-meta">
+									On											<span class="date"><span class="screen-reader-text">Posted on</span> <a href="https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/" rel="bookmark"><time class="entry-date published" datetime="2023-09-04T08:55:16+01:00">Sep 4, 2023</time><time class="updated" datetime="2023-09-27T15:30:03+01:00">Sep 27, 2023</time></a></span>
+																by						<a href="https://www.irishjobs.ie/careeradvice/author/irishjobs-team/"><span class="author vcard">IrishJobs Team</span></a>
+																		to					<a href="https://www.irishjobs.ie/careeradvice/job-news/" rel="category tag">Job News</a>							</div>
+			 <!-- Placed Post meta here --> 
+<hr class="ruler"> 
+	<article id="post-33253" class="post-33253 post type-post status-publish format-standard has-post-thumbnail hentry category-job-news">	
+		<span class="rt-reading-time" style="display: block;"><span class="rt-label rt-prefix">Reading Time: </span> <span class="rt-time">3</span> <span class="rt-label rt-postfix">minutes</span></span><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>New research published this week by global employer branding experts, <a href="https://universumglobal.com/blog/employer-branding-now-2023-pr/">Universum</a>, part of IrishJobs, reveals that female graduates expect to earn 11% less than their male counterparts.</p>
+<p>The Most Attractive Employers Index Ireland 2023, which was conducted among 8000+ students in Ireland across Business &amp; Economics, IT, Engineering, Natural Sciences, Humanities, Law, and Medicine, provides a snapshot of the key attributes that today&#8217;s students are looking for in their future employer.</p>
+<p>While male students expect to earn <strong>€40,441</strong> in their first full-time job after graduation, female students say they expect to earn <strong>€35,891</strong>, a gap of approximately <strong>11%</strong>. It is the first time the gender pay gap has increased since 202, indicating the relative persistence of the phenomenon among the next generation of the workforce.</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Engineering Equality</h2>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="2560" height="1342" src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-scaled.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-scaled.jpg 2560w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-300x157.jpg 300w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-800x419.jpg 800w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-150x79.jpg 150w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-768x402.jpg 768w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-1536x805.jpg 1536w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-2048x1073.jpg 2048w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-848x444.jpg 848w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-1140x597.jpg 1140w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-1170x613.jpg 1170w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Engineering-Equality-1920x1006.jpg 1920w" sizes="(max-width: 2560px) 100vw, 2560px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Within the analysed sectors, there is considerable variation in the gender pay gap.</p>
+<p>In the Engineering sector, there is no significant difference between male and female graduates in expected salary post-graduation, with males expecting to earn <strong>€41,719 </strong>and females looking for earnings of <strong>€41,698.</strong> It brings the expected average salary for engineering graduates to <strong>€41,387. </strong>This result may indicate the significant efforts made by the engineering industry to encourage female participation and increase the attractiveness of the sector to women in recent years.</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Gaps in IT &amp; Business</h2>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img loading="lazy" decoding="async" width="2560" height="1342" src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-scaled.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-scaled.jpg 2560w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-300x157.jpg 300w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-800x419.jpg 800w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-150x79.jpg 150w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-768x402.jpg 768w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-1536x805.jpg 1536w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-2048x1073.jpg 2048w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-848x444.jpg 848w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-1140x597.jpg 1140w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-1170x613.jpg 1170w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/IT-Graduates-1920x1006.jpg 1920w" sizes="auto, (max-width: 2560px) 100vw, 2560px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>In contrast, in the tech industry, the expected earning for female graduates are expected to earn <strong>9%</strong> less on average than their male counterparts. With male graduates expecting to earn <strong>€41,989, </strong>their female counterparts are looking for a starting salary of <strong>€38,240.</strong></p>
+<p>A gender pay gap of <strong>7%</strong> was observed in the Business &amp; Economics sector, with men expecting an average salary of <strong>€39,264</strong> and women expecting to earn <strong>€36,403.</strong></p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img loading="lazy" decoding="async" width="2560" height="1342" src="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-scaled.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-scaled.jpg 2560w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-300x157.jpg 300w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-800x419.jpg 800w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-150x79.jpg 150w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-768x402.jpg 768w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-1536x805.jpg 1536w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-2048x1073.jpg 2048w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-848x444.jpg 848w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-1140x597.jpg 1140w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-1170x613.jpg 1170w, https://www.irishjobs.ie/careeradvice/wp-content/uploads/Business-Economics-1920x1006.jpg 1920w" sizes="auto, (max-width: 2560px) 100vw, 2560px" /></div>
+		</figure>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Workplace Priorities</h2>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>The data also shows clear differences in workplace priorities between male and female students. Female students put a greater emphasis on job security (1st) and a friendly work environment (2nd) in career preferences, while male students are more focused on financial compensation in the form of high future earnings (1st) and a competitive base salary (2nd).</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Top Career Preferences</h2>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>High future earnings (1st) and job security (2nd) are the top overall attributes for third-level graduates across Ireland when considering their future careers, indicating the inflationary pressures and concerns around the rising cost of living are having an impact on student&#8217;s career choices. These are followed by a friendly work environment (3rd), good work-life balance (4th), and a clear path for career advancement (5th).</p>
+<p>The importance of flexible working conditions (6th) to graduates has risen by four places since 2021, indicating that attitudes towards remote working triggered by the pandemic have solidified for the long term. <strong>75%</strong> of graduates state that they are interested in remote working opportunities, a <strong>4%</strong> increase from the number last year.</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Buoyant Jobs Market</h2>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>This year&#8217;s cohort of graduates have entered a strong jobs market. The<strong> 4.1%</strong> July unemployment rate is closed to a historic low with near full employment projected for the medium term.</p>
+<p>According to data from the IrishJobs Jobs Index for Q2 2023, the jobs market is more settles than previous years, with job vacancies now largely in line with pre-Covid Q2 2019 levels (+1%).</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Insights</h2>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Commenting on the results of the research, <strong>Steve Ward, UK and Ireland Business Director, Universum</strong> said:</p>
+<p><em>&#8220;Now in its 5th edition, the annual Most Attractive Employers Index provides detailed insights into students&#8217; career preferences and how they are being impacted by economic factors. The next generation of graduates are joining a strong jobs market, with the unemployment rate close to a historic low. In this context, it is unsurprising to see high earnings as the top preference for graduates once again. A rising cost of living indicates that the next generation of graduates are prioritising future financial income, while the tight labour market offers a constructive environment to achieve progress on this ambition.&#8221;</em></p>
+<p><em>&#8220;Our findings showed clear differences between male and female graduates in career priorities, with male students prioritising financial compensation more than their female counterparts. Despite the rising cost of living, female graduates expect to earn 11% less than male students. Clearly, more work needs to be undertaken by employers to address this issue and achieve greater pay parity.&#8221;</em></p>
+<p><em>&#8220;With many large organisations about to kick off their annual graduate recruitment programmes, employers should be conscious of the evolving demands of this new cohort to talent so they can tailor their hiring and recruitment strategies to compete effectively for best candidates.&#8221;</em></p>
+
+		</div>
+	</div>
+<div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-primary" href="https://www.irishjobs.ie/?cid=SEA_GO_IE-IJ-BRAND---E%7C%7C%5BA%5D_c_irishjobs%20Exact--%7C--_irish%20jobs_HP_RSA;2;&#038;gclid=EAIaIQobChMI2ZiOmvH-gAMVI6BaBR1BmwfEEAAYASAAEgJcYfD_BwE" title="" target="_blank">See the latest job openings with IrishJobs</a></div></div></div></div></div>
+<div class="saboxplugin-wrap" itemtype="http://schema.org/Person" itemscope itemprop="author"><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img data-del="avatar" alt="IrishJobs Team" src='https://www.irishjobs.ie/careeradvice/wp-content/uploads/Pebbles-Blog-500x500-1-120x120.jpg' class='avatar pp-user-avatar avatar-100 photo ' height='100' width='100'/></div><div class="saboxplugin-authorname"><a href="https://www.irishjobs.ie/careeradvice/author/irishjobs-team/" class="vcard author" rel="author" itemprop="url"><span class="fn" itemprop="name">IrishJobs Team</span></a></div><div class="saboxplugin-desc"><div itemprop="description"><p>IrishJobs.ie has been helping people find the job they want for over 20 years. Our team is delighted to share our job hunting tips and advice with you.</p>
+</div></div><div class="clearfix"></div></div></div><div class='heateorSssClear'></div><div  class='heateor_sss_sharing_container heateor_sss_horizontal_sharing' data-heateor-sss-href='https://www.irishjobs.ie/careeradvice/female-graduates-expect-to-earn-11-less-than-male-counterparts/'><div class='heateor_sss_sharing_title' style="font-weight:bold" ></div><div class="heateor_sss_sharing_ul"><a class="heateor_sss_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F" title="Facebook" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#3c589a;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-5 -5 42 42"><path d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_twitter" href="http://twitter.com/intent/tweet?text=Female%20Graduates%20Expect%20to%20Earn%2011%25%20Less%20Than%20Male%20Counterparts&url=https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F" title="Twitter" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_twitter" style="background-color:#55acee;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-4 -4 39 39"><path d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_instagram" href="https://www.instagram.com/irishjobsie" title="Instagram" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#53beee;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" version="1.1" viewBox="-10 -10 148 148" width="100%" height="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M86,112H42c-14.336,0-26-11.663-26-26V42c0-14.337,11.664-26,26-26h44c14.337,0,26,11.663,26,26v44 C112,100.337,100.337,112,86,112z M42,24c-9.925,0-18,8.074-18,18v44c0,9.925,8.075,18,18,18h44c9.926,0,18-8.075,18-18V42 c0-9.926-8.074-18-18-18H42z" fill="#fff"></path></g><g><path d="M64,88c-13.234,0-24-10.767-24-24c0-13.234,10.766-24,24-24s24,10.766,24,24C88,77.233,77.234,88,64,88z M64,48c-8.822,0-16,7.178-16,16s7.178,16,16,16c8.822,0,16-7.178,16-16S72.822,48,64,48z" fill="#fff"></path></g><g><circle cx="89.5" cy="38.5" fill="#fff" r="5.5"></circle></g></g></svg></span></a><a class="heateor_sss_email" onclick="window.open('mailto:?subject=' + decodeURIComponent('Female%20Graduates%20Expect%20to%20Earn%2011%25%20Less%20Than%20Male%20Counterparts' ).replace('&', '%26') + '&body=' + decodeURIComponent('https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F' ), '_blank')" href="javascript:void(0)" title="Email" rel="nofollow noopener" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#649a3f;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-4 -4 43 43"><path d="M 5.5 11 h 23 v 1 l -11 6 l -11 -6 v -1 m 0 2 l 11 6 l 11 -6 v 11 h -22 v -11" stroke-width="1" fill="#fff"></path></svg></span></a><a class="heateor_sss_whatsapp" href="https://api.whatsapp.com/send?text=Female%20Graduates%20Expect%20to%20Earn%2011%25%20Less%20Than%20Male%20Counterparts https%3A%2F%2Fwww.irishjobs.ie%2Fcareeradvice%2Ffemale-graduates-expect-to-earn-11-less-than-male-counterparts%2F" title="Whatsapp" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#55eb4c;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-6 -5 40 40"><path class="heateor_sss_svg_stroke heateor_sss_no_fill" stroke="#fff" stroke-width="2" fill="none" d="M 11.579798566743314 24.396926207859085 A 10 10 0 1 0 6.808479557110079 20.73576436351046"></path><path d="M 7 19 l -1 6 l 6 -1" class="heateor_sss_no_fill heateor_sss_svg_stroke" stroke="#fff" stroke-width="2" fill="none"></path><path d="M 10 10 q -1 8 8 11 c 5 -1 0 -6 -1 -3 q -4 -3 -5 -5 c 4 -2 -1 -5 -1 -4" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_copy_link" href="javascript:void(0)" title="Copy Link" rel="nofollow noopener" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_copy_link" style="background-color:#ffc112;width:32px;height:32px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-4 -4 40 40"><path fill="#fff" d="M24.412 21.177c0-.36-.126-.665-.377-.917l-2.804-2.804a1.235 1.235 0 0 0-.913-.378c-.377 0-.7.144-.97.43.026.028.11.11.255.25.144.14.24.236.29.29s.117.14.2.256c.087.117.146.232.177.344.03.112.046.236.046.37 0 .36-.126.666-.377.918a1.25 1.25 0 0 1-.918.377 1.4 1.4 0 0 1-.373-.047 1.062 1.062 0 0 1-.345-.175 2.268 2.268 0 0 1-.256-.2 6.815 6.815 0 0 1-.29-.29c-.14-.142-.223-.23-.25-.254-.297.28-.445.607-.445.984 0 .36.126.664.377.916l2.778 2.79c.243.243.548.364.917.364.36 0 .665-.118.917-.35l1.982-1.97c.252-.25.378-.55.378-.9zm-9.477-9.504c0-.36-.126-.665-.377-.917l-2.777-2.79a1.235 1.235 0 0 0-.913-.378c-.35 0-.656.12-.917.364L7.967 9.92c-.254.252-.38.553-.38.903 0 .36.126.665.38.917l2.802 2.804c.242.243.547.364.916.364.377 0 .7-.14.97-.418-.026-.027-.11-.11-.255-.25s-.24-.235-.29-.29a2.675 2.675 0 0 1-.2-.255 1.052 1.052 0 0 1-.176-.344 1.396 1.396 0 0 1-.047-.37c0-.36.126-.662.377-.914.252-.252.557-.377.917-.377.136 0 .26.015.37.046.114.03.23.09.346.175.117.085.202.153.256.2.054.05.15.148.29.29.14.146.222.23.25.258.294-.278.442-.606.442-.983zM27 21.177c0 1.078-.382 1.99-1.146 2.736l-1.982 1.968c-.745.75-1.658 1.12-2.736 1.12-1.087 0-2.004-.38-2.75-1.143l-2.777-2.79c-.75-.747-1.12-1.66-1.12-2.737 0-1.106.392-2.046 1.183-2.818l-1.186-1.185c-.774.79-1.708 1.186-2.805 1.186-1.078 0-1.995-.376-2.75-1.13l-2.803-2.81C5.377 12.82 5 11.903 5 10.826c0-1.08.382-1.993 1.146-2.738L8.128 6.12C8.873 5.372 9.785 5 10.864 5c1.087 0 2.004.382 2.75 1.146l2.777 2.79c.75.747 1.12 1.66 1.12 2.737 0 1.105-.392 2.045-1.183 2.817l1.186 1.186c.774-.79 1.708-1.186 2.805-1.186 1.078 0 1.995.377 2.75 1.132l2.804 2.804c.754.755 1.13 1.672 1.13 2.75z"/></svg></span></a></div><div class="heateorSssClear"></div></div><div class='heateorSssClear'></div><div class='yarpp yarpp-related yarpp-related-website yarpp-related-none yarpp-template-thumbnails'>
+<!-- YARPP Thumbnails -->
+<h3>Related posts:</h3>
+<p>No related posts.</p>
+</div>
+			</article>
+	</div><!--.entry-content-->
+										<div class="nav-links post-navigation">
+											<div class="row">
+												<div class="col-md-5">
+													<div class="nav-previous">
+														<a href="https://www.irishjobs.ie/careeradvice/merit-medical-galway-re-accredited-with-the-keepwell-mark-award/" rel="prev"><span class="meta-nav">Previous</span><span class="screen-reader-text">Previous post:</span><span class="post-title">Merit Medical Galway re-accredited with The KeepWell Mark Award</span></a>													</div><!--nav-previous-->
+												</div><!--.col-md-5-->
+												<div class="col-md-5 col-md-offset-2">
+													<div class="nav-next">
+														<a href="https://www.irishjobs.ie/careeradvice/inside-story-atlantach/" rel="next"><span class="meta-nav">Next</span><span class="screen-reader-text">Next post:</span><span class="post-title">Inside Story: Atlantach</span></a>													</div><!--.nav-next-->
+												</div><!--.col-md-5-->
+											</div><!--.row-->
+										</div><!--.nav-links post-navigation-->
+																	</div><!--.col-md-10-->
+							</div><!--.col-md-9-->
+															<div class="col-md-3">
+	<div class="sidebar-widget-area">
+		<section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.irishjobs.ie/careeradvice/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search Career Advice&hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section><section id="custom_html-4" class="widget_text widget widget_custom_html"><h3 class="widget-title">Career Advice</h2><div class="textwidget custom-html-widget"><ul id="category-side-menu">
+	<li><a href="/careeradvice/cv-templates/"> CV Templates</a></li>
+	<li><a href="/careeradvice/cover-letter-templates/">Cover Letter Templates</a></li>
+	<li><a href="/careeradvice/cv-advice/cv-tips-by-sector/">CV tips by sector</a></li>
+	<li><a href="/careeradvice/cv-advice/cover-letter/">Cover Letter</a></li>
+</ul></div></section><section id="custom_html-5" class="widget_text widget widget_custom_html"><h3 class="widget-title">Interview Advice</h2><div class="textwidget custom-html-widget"><ul id="category-side-menu">
+	<li><a href="/careeradvice/interview-advice/">Interview Advice</a></li>
+		<li><a href="/careeradvice/salaries/">Salaries</a></li>	
+	<li><a href="/careeradvice/job-news/">Job News</a></li>
+</ul></div></section>	</div>
+</div>
+													</div><!--.row-->
+					</article><!--.entry-full-content-->
+				</div><!--.main-content-->
+			</div>
+		</div><!--.row-->
+	</div><!--.content-wrapper-->
+
+</div><!--.container-->
+		
+
+	<footer>
+		<div class="container"> 
+		<div class="row">
+				<div class="col-xs-12 col-sm-3 menu">
+					<h4 id="footer-title-1">						
+											
+						<aside id="custom_html-7" class="widget_text widget widget_custom_html clearfix"><div class="textwidget custom-html-widget">IrishJobs</div></aside>				
+
+						
+					</h4>
+					<div class="menu-footer-column-1-container"><ul id="menu-footer-column-1" class="menu"><li id="menu-item-32814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32814"><a href="https://www.irishjobs.ie/about/about-us">About Us</a></li>
+<li id="menu-item-32815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32815"><a href="https://www.irishjobs.ie/about/privacy-policy">Privacy policy</a></li>
+<li id="menu-item-32816" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32816"><a href="https://www.irishjobs.ie/about/terms-and-conditions">Terms and conditions</a></li>
+<li id="menu-item-32817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32817"><a href="https://www.irishjobs.ie/about/cookies">Cookies</a></li>
+<li id="menu-item-32818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32818"><a href="https://www.irishjobs.ie/jobs-at/irishjobs/profile">Work for us</a></li>
+<li id="menu-item-32819" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32819"><a href="https://www.irishjobs.ie/recruiters/recruiters-news/">Press Center</a></li>
+<li id="menu-item-32831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32831"><a href="https://www.irishjobs.ie/about/partners">Partners</a></li>
+</ul></div>				</div>
+				<div class="col-xs-12 col-sm-3 menu">
+				    <h4 id="footer-title-2">
+											
+						<aside id="custom_html-8" class="widget_text widget widget_custom_html clearfix"><div class="textwidget custom-html-widget">Jobseeker</div></aside>				
+
+						
+					</h4>
+					<div class="menu-footer-column-2-container"><ul id="menu-footer-column-2" class="menu"><li id="menu-item-32820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32820"><a href="https://www.irishjobs.ie/account/signin?ReturnUrl=/">Jobseeker login</a></li>
+<li id="menu-item-32821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32821"><a href="https://www.irishjobs.ie/about/help-and-support">Contact us &#8211; jobseekers</a></li>
+<li id="menu-item-32822" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32822"><a href="https://www.irishjobs.ie/careeradvice/salaries/">Salaries</a></li>
+<li id="menu-item-32823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32823"><a href="https://www.irishjobs.ie/about/help-and-support">Help</a></li>
+</ul></div>				</div>
+				<div class="col-xs-12 col-sm-3 menu">
+				<h4 id="footer-title-3">
+										
+						<aside id="custom_html-9" class="widget_text widget widget_custom_html clearfix"><div class="textwidget custom-html-widget">Recruiter</div></aside>				
+
+						
+				</h4>
+					<div class="menu-footer-column-3-container"><ul id="menu-footer-column-3" class="menu"><li id="menu-item-32824" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32824"><a href="https://ecommerce.irishjobs.ie/advertise-a-job">Advertise a job</a></li>
+<li id="menu-item-32825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32825"><a href="https://hub.irishjobs.ie">Existing customer login</a></li>
+<li id="menu-item-32826" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32826"><a href="https://ecommerce.irishjobs.ie/advertise-a-job">Contact us &#8211; recruiters</a></li>
+<li id="menu-item-32827" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32827"><a href="https://www.irishjobs.ie/recruiters/recruiters-news/?INHSE=JSHP_Footer_Recruiter_ContactUs">Recruiter news</a></li>
+<li id="menu-item-32828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32828"><a href="https://ecommerce.irishjobs.ie/recruiters-international-sales">Recruit internationally</a></li>
+<li id="menu-item-32829" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32829"><a href="https://www.irishjobs.ie/recruiters/become-our-partner/">Become Our Partner</a></li>
+</ul></div>				</div>
+                <div class="col-xs-12 col-sm-3 menu">
+				<h4 id="footer-title-4">Mobile App</h4>
+                                    
+                        <aside id="custom_html-11" class="widget_text widget widget_custom_html clearfix"><div class="textwidget custom-html-widget"><div class="mobile-apps-footer">
+<a target="_blank" href="https://app.adjust.com/hjp4j3" rel="noopener noreferrer"><span class="app-store-icon apple" title="Download the iPhone app on iTunes" alt="Download the iPhone app on iTunes"></span></a>
+<a target="_blank" href="https://app.adjust.com/j8zfif" rel="noopener noreferrer"><span class="app-store-icon android" title="Download the Android app on Google Play" alt="Download the Android app on Google Play"></span></a>
+</div></div></aside>                
+                    		
+				</div>
+			</div>
+		</div> 
+        <div class="container"> 
+            <div class="row">
+                                        
+                        <aside id="custom_html-6" class="widget_text widget widget_custom_html clearfix"><div class="textwidget custom-html-widget"><div class="col-xs-12 social-links text-center">
+                    <a target="_blank" href="https://twitter.com/Irishjobsie" class="twitter icon" title="twitter" rel="noopener noreferrer">&nbsp;</a>
+                    <a target="_blank" href="https://www.facebook.com/irishjobs.ie" class="facebook icon" title="facebook" rel="noopener noreferrer">&nbsp;</a>
+                    <a target="_blank" href="https://www.youtube.com/c/irishjobs" class="youtube icon" title="youtube.com" rel="noopener noreferrer">&nbsp;</a>
+	             <a target="_blank" href="https://www.linkedin.com/company/irishjobs-ie/" class="linkedin icon" title="linkedin.com" rel="noopener noreferrer">&nbsp;</a>
+<a target="_blank" href="https://www.instagram.com/irishjobsie/" class="instagram icon" title="instagram.com" rel="noopener noreferrer">&nbsp;</a>
+                </div></div></aside>                
+                    		
+            </div>
+        </div>
+        <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 content">
+                    <a target="_blank" title="IrishJobs.ie" href="https://www.irishjobs.ie/jobs-at/irishjobs/profile" class="footer-logo">
+                        &nbsp;
+                    </a>
+                    <span>
+                        IrishJobs © 2023 Registered in Ireland under Company Number 26076                     
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+	</footer> 
+
+
+
+	    <style>
+	@media only screen and (min-width: 768px)
+body:not(.menu-sandwich) #main-menu>ul>li>a:focus, body:not(.menu-sandwich) #main-menu>ul>li>a:hover {
+    color: #ffffff !important;
+}	
+</style>
+
+
+
+<script> 
+
+  // call function 
+  SaonImg();
+
+  
+  // function 
+  function SaonImg (){
+         
+    // get image 
+    var getImg = document.querySelector('.fade-in-img-inner-wrap > img'); 
+    
+    // get image width 
+    var getWidth = getImg.naturalHeight; 
+    // get image height 
+	var getHeight = getImg.naturalWidth; 
+    
+    
+    
+    // grabbing elements to change 
+    var getImgClass = document.querySelector('.fade-in-img-inner-wrap'); 
+    var getImgNew = document.querySelector('.fade-in-img-inner-wrap > img'); 
+   
+ 
+    
+   if ( getWidth < 450 && getHeight < 450) {
+   
+          getImgClass.style.background = 'rgba(51, 51, 51, 0.1)'; 
+     
+          getImgNew.style.width = '300px'; 
+          getImgNew.style.margin = 'auto'; 
+          getImgNew.style.display = 'block'; 
+     
+    }
+    
+      if ( getWidth > 451 && getHeight > 451) {
+    getImgNew.style.width = '100%'; 
+      }
+	 
+	  	  if (window.innerWidth < 451) {
+   getImgClass.style.background = 'rgba(255, 255, 255)';
+			  getImgNew.style.width = '100%'; 
+}
+	
+  }
+  
+</script><link rel='stylesheet' id='yarppRelatedCss-css' href='https://www.irishjobs.ie/careeradvice/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.27.7' type='text/css' media='all' />
+<script type="text/javascript" id="analytics-js-extra">
+/* <![CDATA[ */
+var analytics = {"nonce":"408080402f"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/atlas-search/includes/../public/js/analytics.js?ver=0.2.78" id="analytics-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.irishjobs.ie\/careeradvice\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.2" id="contact-form-7-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.irishjobs.ie\/careeradvice\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"6d7800be62","disable_ajax_form":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=3.2.3" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/js/bootstrap/transition.min.js?ver=3.3.7" id="bootstrap-transition-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/js/bootstrap/collapse.min.js?ver=3.3.7" id="bootstrap-collapser-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/js/slick/slick.min.js?ver=1.6.0" id="slick-js-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/themes/visual-composer-starter/js/functions.min.js?ver=3.0.3" id="visualcomposerstarter-script-js"></script>
+<script type="text/javascript" id="heateor_sss_sharing_js-js-before">
+/* <![CDATA[ */
+function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'https://www.irishjobs.ie/careeradvice/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'https://www.irishjobs.ie/careeradvice/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'https://www.irishjobs.ie/careeradvice/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.3.31" id="heateor_sss_sharing_js-js"></script>
+<script type="text/javascript" src="https://www.irishjobs.ie/careeradvice/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.0.5" id="wpb_composer_front_js-js"></script>
+
+<script>
+	// this script will get the current year then append it to the sub-footer 
+	function getYearFooter() {
+		var d = new Date();
+		var n = d.getFullYear();
+		document.getElementById("current-Year").innerHTML = n;
+	}
+
+	getYearFooter(); 
+</script>
+</body>
+</html>

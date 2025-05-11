@@ -110,6 +110,39 @@ if (window.location.pathname.includes("about.html")) {
     );
   }
 }
+// Fetch and insert projects
+if (
+  window.location.pathname.includes("index.html") ||
+  window.location.pathname === "/"
+) {
+  const projectsContainer = document.getElementById("projects-container");
+  if (projectsContainer) {
+    fetch("projects-section.html")
+      .then((response) => {
+        if (!response.ok)
+          throw new Error("Failed to load projects-section.html");
+        return response.text();
+      })
+      .then((data) => {
+        projectsContainer.innerHTML = data;
+        console.log("Projects section loaded inside index.html");
+
+        // Re-initialize toggles after insertion
+        document.querySelectorAll(".toggle-details").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const details = btn.nextElementSibling;
+            details.classList.toggle("hidden");
+            btn.textContent = details.classList.contains("hidden")
+              ? "Learn More"
+              : "Show Less";
+          });
+        });
+      })
+      .catch((error) =>
+        console.error("Error loading projects section:", error)
+      );
+  }
+}
 
 // Function to Generate Multiple Stars in Different Rings
 function generateStars() {
