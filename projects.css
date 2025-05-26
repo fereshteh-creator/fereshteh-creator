@@ -152,6 +152,7 @@ pre {
 .projects-section {
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 100px;
 
   text-align: center;
 }

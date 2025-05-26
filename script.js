@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error loading header:", error));
 
-  // ✅ Moved outside so it's always evaluated when DOM is ready
+  // Moved outside so it's always evaluated when DOM is ready
   setTimeout(() => {
     const path = window.location.pathname;
 
@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       path.includes("index.html") ||
       path.includes("/fereshteh-creator/")
     ) {
-      console.log("✅ Running star generation...");
+      console.log("Running star generation...");
       generateStars();
       startRingExpansion();
       window.dispatchEvent(new Event("resize"));
     } else {
-      console.log("❌ Not running star logic on this page:", path);
+      console.log("Not running star logic on this page:", path);
     }
   }, 300); // Delay slightly longer to ensure DOM is ready
 });
@@ -105,15 +105,14 @@ if (window.location.pathname.includes("about.html")) {
       })
       .catch((error) => console.error("Error loading skills section:", error));
   } else {
-    console.warn(
-      "⚠️ No #skills-container found. Skipping skills section load."
-    );
+    console.warn("No #skills-container found. Skipping skills section load.");
   }
 }
 // Fetch and insert projects
 if (
   window.location.pathname.includes("index.html") ||
-  window.location.pathname === "/"
+  window.location.pathname === "/" ||
+  window.location.hash === "#projects"
 ) {
   const projectsContainer = document.getElementById("projects-container");
   if (projectsContainer) {
@@ -137,6 +136,21 @@ if (
               : "Show Less";
           });
         });
+
+        // Scroll only if user navigated via link
+        const shouldScrollToProjects =
+          window.location.hash === "#projects" &&
+          document.referrer &&
+          !document.referrer.includes("index.html");
+
+        if (shouldScrollToProjects) {
+          setTimeout(() => {
+            const target = document.getElementById("projects-section");
+            if (target) {
+              target.scrollIntoView({ behavior: "auto" });
+            }
+          });
+        }
       })
       .catch((error) =>
         console.error("Error loading projects section:", error)
