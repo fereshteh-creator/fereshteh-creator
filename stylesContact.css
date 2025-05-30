@@ -6,6 +6,7 @@ body {
   padding-top: 80px;
   display: flex;
   justify-content: center;
+  font-size: 1.8rem;
 }
 
 .contact-container {
@@ -13,6 +14,29 @@ body {
   width: 90%;
   margin: 50px auto;
   text-align: center;
+}
+
+.contact-container h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10%;
+}
+
+.contact-container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    rgb(20, 24, 32),
+    rgba(233, 184, 80, 0.5),
+    rgba(58, 120, 202, 0.13)
+  );
+  border-radius: 999px;
 }
 
 .contact-form {
