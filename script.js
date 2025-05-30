@@ -1,3 +1,11 @@
+function forceLayoutRefresh() {
+  console.log("📐 Forcing layout refresh...");
+  document.body.style.display = "none";
+  document.body.offsetHeight; // force reflow
+  document.body.style.display = "block";
+  window.dispatchEvent(new Event("resize"));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Script loaded and DOM is ready.");
 
@@ -8,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.insertAdjacentHTML("afterbegin", data);
       console.log("Header loaded.");
 
-      document.body.style.display = "none";
-      document.body.offsetHeight; // Force a reflow
-      document.body.style.display = "block";
+      forceLayoutRefresh();
 
       // Hamburger toggle setup
       const hamburger = document.querySelector(".hamburger");
@@ -63,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Not running star logic on this page:", path);
     }
   }, 300); // Delay slightly longer to ensure DOM is ready
+  setTimeout(forceLayoutRefresh, 500);
 });
 
 // Fetch and insert the footer
@@ -71,8 +78,10 @@ fetch("footer.html")
   .then((data) => {
     document.body.insertAdjacentHTML("beforeend", data);
     console.log("Footer loaded.");
+    window.dispatchEvent(new Event("resize"));
   })
   .catch((error) => console.error("Error loading footer:", error));
+
 //  Adjust Footer Position Based on Expanding Rings
 function adjustFooter() {
   const footer = document.querySelector(".footer");
@@ -102,6 +111,7 @@ if (window.location.pathname.includes("about.html")) {
       .then((data) => {
         skillsContainer.innerHTML = data;
         console.log("Skills section successfully loaded inside About.");
+        window.dispatchEvent(new Event("resize"));
       })
       .catch((error) => console.error("Error loading skills section:", error));
   } else {
@@ -125,6 +135,7 @@ if (
       .then((data) => {
         projectsContainer.innerHTML = data;
         console.log("Projects section loaded inside index.html");
+        window.dispatchEvent(new Event("resize"));
 
         // Re-initialize toggles after insertion
         document.querySelectorAll(".toggle-details").forEach((btn) => {
@@ -137,20 +148,31 @@ if (
           });
         });
 
-        // Scroll only if user navigated via link
-        const shouldScrollToProjects =
-          window.location.hash === "#projects" &&
-          document.referrer &&
-          !document.referrer.includes("index.html");
+        // If hash is #projects, wait until section exists before scrolling
+        if (window.location.hash === "#projects") {
+          const waitForElement = (selector, timeout = 2000) =>
+            new Promise((resolve, reject) => {
+              const interval = 50;
+              let elapsed = 0;
+              const check = () => {
+                const element = document.querySelector(selector);
+                if (element) return resolve(element);
+                elapsed += interval;
+                if (elapsed >= timeout) return reject();
+                setTimeout(check, interval);
+              };
+              check();
+            });
 
-        if (shouldScrollToProjects) {
-          setTimeout(() => {
-            const target = document.getElementById("projects-section");
-            if (target) {
-              target.scrollIntoView({ behavior: "auto" });
-            }
-          });
+          waitForElement("#projects-section")
+            .then((target) => {
+              target.scrollIntoView({ behavior: "smooth" });
+            })
+            .catch(() => {
+              console.warn("Could not find #projects-section after injection.");
+            });
         }
+        window.dispatchEvent(new Event("resize"));
       })
       .catch((error) =>
         console.error("Error loading projects section:", error)
@@ -257,3 +279,110 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
+// === INTERACTIVE GRADIENT DESCENT CHART LOGIC ===
+if (document.querySelector("#interactive-chart")) {
+  const width = 700;
+  const height = 300;
+  const margin = { top: 20, right: 20, bottom: 40, left: 50 };
+
+  const svg = d3
+    .select("#interactive-chart")
+    .append("svg")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .classed("responsive-svg", true);
+
+  const chart = svg
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const xScale = d3
+    .scaleLinear()
+    .domain([-10, 10])
+    .range([0, width - margin.left - margin.right]);
+  const yScale = d3
+    .scaleLinear()
+    .domain([0, 50])
+    .range([height - margin.top - margin.bottom, 0]);
+
+  const loss = (x) => Math.sin(x) * 10 + 0.5 * x * x;
+
+  const xData = d3.range(-10, 10.1, 0.1);
+  const yData = xData.map(loss);
+
+  const baseLine = d3
+    .line()
+    .x((d, i) => xScale(xData[i]))
+    .y((d) => yScale(d))
+    .curve(d3.curveMonotoneX);
+
+  chart
+    .append("path")
+    .datum(yData)
+    .attr("fill", "none")
+    .attr("stroke", "#60a5fa")
+    .attr("stroke-width", 2)
+    .attr("d", baseLine);
+
+  chart
+    .append("g")
+    .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
+    .call(d3.axisBottom(xScale));
+
+  chart.append("g").call(d3.axisLeft(yScale));
+
+  document.getElementById("lr-slider").addEventListener("input", function () {
+    document.getElementById("lr-value").textContent = this.value;
+  });
+
+  document.getElementById("run-descent").addEventListener("click", () => {
+    const lr = parseFloat(document.getElementById("lr-slider").value);
+    const feedback = document.getElementById("feedback");
+    chart.selectAll(".descent-path, .descent-dot").remove();
+
+    let w = -9;
+    const points = [{ x: w, y: loss(w) }];
+    for (let i = 0; i < 20; i++) {
+      const grad = Math.cos(w) * 10 + w;
+      w = w - lr * grad;
+      points.push({ x: w, y: loss(w) });
+      if (Math.abs(grad) < 0.01) break;
+    }
+
+    chart
+      .append("path")
+      .datum(points)
+      .attr("class", "descent-path")
+      .attr("fill", "none")
+      .attr("stroke", "#e9b850")
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", "4 4")
+      .attr(
+        "d",
+        d3
+          .line()
+          .x((d) => xScale(d.x))
+          .y((d) => yScale(d.y))
+      );
+
+    chart
+      .selectAll(".descent-dot")
+      .data(points)
+      .enter()
+      .append("circle")
+      .attr("class", "descent-dot")
+      .attr("cx", (d) => xScale(d.x))
+      .attr("cy", (d) => yScale(d.y))
+      .attr("r", 4)
+      .attr("fill", "#e9b850");
+
+    // Feedback
+    if (lr < 0.05) {
+      feedback.textContent = "Too slow. Try increasing the learning rate.";
+    } else if (lr > 0.25) {
+      feedback.textContent = "Too fast! You overshot.";
+    } else {
+      feedback.textContent = "Just right! You’re converging smoothly.";
+    }
+  });
+}

@@ -85,7 +85,31 @@
         <div id="skills-container"></div>
       </div>
     </section>
+    <section class="descent-section">
+      <h2>
+        Gradient Descent, a machine learning game – Try It Yourself to find the
+        global minimum loss
+      </h2>
+      <div class="descent-controls">
+        <label for="lr-slider"
+          >Learning Rate: <span id="lr-value">0.1</span></label
+        >
+        <input
+          type="range"
+          id="lr-slider"
+          min="0.01"
+          max="0.5"
+          step="0.01"
+          value="0.1"
+        />
+        <button id="run-descent">Run Descent</button>
+        <p id="feedback" class="feedback-msg"></p>
+      </div>
+      <div id="interactive-chart"></div>
+    </section>
 
     <script src="script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

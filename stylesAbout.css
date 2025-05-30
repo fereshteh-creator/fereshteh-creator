@@ -275,3 +275,75 @@ p {
     justify-content: center;
   }
 }
+.descent-section {
+  color: white;
+  font-family: sans-serif;
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.descent-controls {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#lr-slider {
+  width: 100%;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #60a5fa, #e9b850);
+  outline: none;
+  margin-bottom: 10px;
+}
+#lr-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #60a5fa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#lr-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #60a5fa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#run-descent {
+  margin-top: 10px;
+  background: #60a5fa;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.feedback-msg {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+#interactive-chart svg {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+}
+.descent-section {
+  padding: 0 16px;
+}
